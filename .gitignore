@@ -7,8 +7,8 @@
 dist
 
 # Node dependencies
-node_modules
-bootstrap-node-app
+.node_modules
+.bootstrap-node-app
 # Logs
 logs
 *.log
