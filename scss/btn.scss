@@ -1,0 +1,47 @@
+.button-outline{
+background-color: transparent;
+border: none;
+color: #fff;
+font-size: 17px;
+font-weight: 400;
+svg{
+  fill: #fff;
+}
+}
+.button-border{
+  background-color: transparent;
+border: 2px solid #fff;
+padding: 8px 20px;
+transition: .2s;
+color: #fff;
+font-size: 17px;
+font-weight: 400;
+svg{
+  fill: #fff;
+}
+&:hover {
+ background-color: #fff;
+ color: #000;
+ svg{
+  fill: #000;
+}
+}
+}
+.button-bg{
+  background-color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 20px;
+  transition: .2s;
+  font-size: 17px;
+font-weight: 400;
+  svg{
+    fill: #000;
+  }
+ &:hover{
+  background-color: transparent;
+  color: #fff;
+  svg{
+    fill: #fff;
+  }
+ }
+}

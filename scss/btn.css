@@ -1,0 +1,49 @@
+.button-outline {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+.button-outline svg {
+  fill: #fff;
+}
+
+.button-border {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 8px 20px;
+  transition: 0.2s;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+.button-border svg {
+  fill: #fff;
+}
+.button-border:hover {
+  background-color: #fff;
+  color: #000;
+}
+.button-border:hover svg {
+  fill: #000;
+}
+
+.button-bg {
+  background-color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 20px;
+  transition: 0.2s;
+  font-size: 17px;
+  font-weight: 400;
+}
+.button-bg svg {
+  fill: #000;
+}
+.button-bg:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.button-bg:hover svg {
+  fill: #fff;
+}/*# sourceMappingURL=btn.css.map */

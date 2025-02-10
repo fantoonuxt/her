@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+// @import "bootstrap/scss/mixins"; 
+@import url('./btn.css');
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  font-family: "DM Sans", serif !important;
+  background-color: #000 !important;
+  color: #FFF !important;
+}
+@function rem($size) {
+  @return #{$size / 16px}rem;
+}
+
+@mixin media-breakpoint-down($size) {
+  @if $size == lg {
+    @media (max-width: 992px) { @content; }
+  }
+  @if $size == md {
+    @media (max-width: 787px) { @content; }
+  }
+  @if $size == sm {
+    @media (max-width: 580px) { @content; }
+  }
+  @if $size == xs {
+    @media (max-width: 370px) { @content; }
+  }
+}
+
+.app-Header{
+  height: rem(150px);
+
+  @include media-breakpoint-down(sm) {
+    height: rem(100px);
+
+  }
+  &-logo {
+    width: rem(250px);
+    display: block;
+    @include media-breakpoint-down(lg) {
+      width: rem(180px);
+    }
+    @include media-breakpoint-down(sm) {
+      width: rem(140px);
+    }
+    @include media-breakpoint-down(xs) {
+      width: rem(120px);
+    }
+    a {
+      &:hover {
+        color: currentColor;
+      }
+    }
+  }
+}
+.intro{
+  padding-top: rem(150px);
+  padding-bottom: rem(150px);
+  background-image: url('../static/images/1.png');
+  object-fit: contain;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+  // top: 0;
+  z-index: -1;
+  height: 100vh;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  color: #fff;
+  .content h1{
+    font-size: rem(70px);
+    font-weight: 400;
+    @include media-breakpoint-down(md) {
+      font-size: rem(55px);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(40px);
+    }
+  }
+}
+
+canvas {
+  border: 2px solid white;
+}
+.colors {
+  display: flex;
+  margin-top: 20px;
+}
+.color-btn {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+.color-btn:hover {
+  transform: scale(1.2);
+}
+.seconed-section{
+  background: linear-gradient(343deg, #000 47.2%, #666 168.62%);
+  justify-content: center;
+    display: flex;
+
+    img{
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      max-height: 700px;
+    }
+}
+.products{
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  h3{
+    font-weight: 400;
+    font-size: rem(50px);
+    @include media-breakpoint-down(md) {
+      font-size: rem(40px);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(35px);
+    }
+  }
+  .app-card {
+      border-bottom: 1px solid #DAA167;
+    .app-card-img {
+      display: grid;
+      place-items: center; 
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+        grid-area: 1 / 1; 
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; 
+        &:last-child {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  
+    &:hover {
+      .app-card-img {
+        img {
+          &:first-child {
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:last-child {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+  }
+  
+}
+.about-us{
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  &-img{
+    width: rem(300px);
+    height:  rem(70px);
+    @include media-breakpoint-down(md) {
+      width: rem(200px);
+      height:  rem(60px);
+    }
+    @include media-breakpoint-down(sm) {
+      width: rem(150px);
+      height:  rem(50px);
+    }
+  }
+  .img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.findYourShade{
+  text-align: center;
+  padding: 100px 0;
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  h3{
+    font-weight: 400;
+    font-size: rem(50px);
+    margin-bottom: 20px;
+    @include media-breakpoint-down(sm) {
+      font-size: rem(35px);
+    }
+  }
+  .circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    @include media-breakpoint-down(sm) {
+      width: 50px;
+      height: 50px;
+    }
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+}
+
+
