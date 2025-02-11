@@ -376,7 +376,6 @@ canvas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: hidden;
   max-height: 0;
   transition: max-height 0.6s ease-in-out;
 }
@@ -408,7 +407,7 @@ canvas {
   height: auto;
 }
 .all:hover .cards {
-  max-height: 500px;
+  max-height: 100%;
 }
 .all:hover .img img {
   transform: scale(1) !important;
