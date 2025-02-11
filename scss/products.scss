@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+// @import "bootstrap/scss/mixins"; 
+@import url('./btn.css');
+@import url('./popup.css');
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  font-family: "DM Sans", serif !important;
+  background-color: #000 !important;
+  color: #FFF !important;
+}
+@function rem($size) {
+  @return #{$size / 16px}rem;
+}
+
+@mixin media-breakpoint-down($size) {
+  @if $size == lg {
+    @media (max-width: 992px) { @content; }
+  }
+  @if $size == md {
+    @media (max-width: 787px) { @content; }
+  }
+  @if $size == sm {
+    @media (max-width: 580px) { @content; }
+  }
+  @if $size == xxs {
+    @media (max-width: 471px) { @content; }
+  }
+  @if $size == xs {
+    @media (max-width: 370px) { @content; }
+  }
+}
+.app-Header{
+  height: rem(150px);
+
+  @include media-breakpoint-down(sm) {
+    height: rem(100px);
+
+  }
+  &-logo {
+    width: rem(250px);
+    display: block;
+    @include media-breakpoint-down(lg) {
+      width: rem(180px);
+    }
+    @include media-breakpoint-down(sm) {
+      width: rem(140px);
+    }
+    @include media-breakpoint-down(xs) {
+      width: rem(120px);
+    }
+    a {
+      &:hover {
+        color: currentColor;
+      }
+    }
+  }
+}
+.products{
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  h3{
+    font-weight: 400;
+    font-size: rem(50px);
+    @include media-breakpoint-down(md) {
+      font-size: rem(40px);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(35px);
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: rem(27px);
+    }
+  }
+  .app-card {
+      border-bottom: 1px solid #DAA167;
+    .app-card-img {
+      display: grid;
+      place-items: center; 
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+        grid-area: 1 / 1; 
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; 
+        &:last-child {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  
+    &:hover {
+      .app-card-img {
+        img {
+          &:first-child {
+            opacity: 0;
+            visibility: hidden;
+          }
+          &:last-child {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+  }
+  
+}
+.sort-container {
+  position: relative;
+  display: inline-block;
+}
+.sort-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: black;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 180px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+}
+.dropdown-menu div {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dropdown-menu div:hover {
+  background-color: gray;
+}
+.show {
+  display: block;
+}
+
+.test{
+  height: rem(200px);
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    height: rem(140px);
+
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    max-width: rem(250px);
+    @include media-breakpoint-down(sm) {
+      max-width: rem(80px);
+
+
+    }
+  }
+  button{
+    background-color: #A51421;
+    color: #fff;
+    font-size: rem(70px);
+    width: 100%;
+    border: none;
+    transition: .2s;
+    @include media-breakpoint-down(lg) {
+      font-size: rem(60px);
+
+    }
+    @include media-breakpoint-down(md) {
+      font-size: rem(50px);
+
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(35px);
+
+    }
+    &:hover{
+      background: #fff;
+      color: #000;
+      svg{
+      fill: #000;
+
+      }
+    }
+    svg{
+      width: 200px;
+      height: 100px;
+      fill: #fff;
+      @include media-breakpoint-down(sm) {
+        width: 150px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.all{
+  position: relative;
+  overflow: hidden;
+
+  .findYourShade{
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('../static/images/5.png');
+    height: rem(900px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease, height 0.5s ease;
+  cursor: pointer;
+  // height: 900px;
+
+  @include media-breakpoint-down(lg) {
+  
+  height: rem(750px);
+  
+  }
+    @include media-breakpoint-down(md) {
+      padding: 70px 0;
+    height: rem(750px);
+  
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 40px 0;
+    height: rem(500px);
+  
+    }
+    h3{
+      font-weight: 400;
+      font-size: rem(70px);
+      margin-bottom: 20px;
+      @include media-breakpoint-down(md) {
+        font-size: rem(45px);
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: rem(35px);
+      }
+    }
+    .circle {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      @include media-breakpoint-down(sm) {
+        width: 50px;
+        height: 50px;
+      }
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  }
+  .hiddenSection{
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
+
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-height: 0;
+      transition: max-height 0.6s ease-in-out;
+      @include media-breakpoint-down(sm) {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .img {
+        flex: 1 1 20%;
+        padding: 3px;
+
+    
+        img{
+          object-fit: cover;
+          opacity: 0;
+          transform: scale(0);
+          transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: rem(350px);
+
+      }
+    }
+  }
+  &:hover{
+    .findYourShade{
+      opacity: 0;
+      height: 0;
+      padding: 0;
+      visibility: hidden;
+    }
+    .hiddenSection {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+  }
+  .cards {
+    max-height: 100%;
+}
+.img img {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  transition-delay: 0.2s !important;
+
+}
+  }
+}
+.footer {
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  color: white;
+  text-align: left;
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  p, li {
+      font-size: 18px;
+  }
+
+  a {
+      color: white;
+      // text-decoration: none;
+      // &:hover {
+      //     text-decoration: underline;
+      // }
+  }
+.fs-base{
+  font-size: 16px;
+  margin-top: 30px;
+}
+  .input-group {
+      max-width: 400px;
+      border: 2px solid  #FFF;
+     input{
+      background-color: transparent;
+      color: #fff;
+
+      outline: none !important;
+      border: none !important;
+     }
+     input::placeholder{
+      color: #fff;
+     }
+     button{
+      padding: 8px 10px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+     }
+  }
+.baianat{
+  text-decoration: underline !important;
+}
+  .footer-logo {
+    padding-top: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 70px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+    }
+  }
+.list-unstyled a{
+  text-decoration: none !important;
+}
+  .d-flex a {
+      font-size: 22px;
+      color: white;
+  }
+}

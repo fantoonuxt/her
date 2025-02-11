@@ -48,3 +48,17 @@ popupOverlay.addEventListener("click", function () {
     popup.style.display = "none";
     popupOverlay.style.display = "none";
 });
+function toggleDropdown() {
+    let dropdown = document.getElementById("dropdown");
+    let arrow = document.querySelector(".arrow");
+    dropdown.classList.toggle("show"); 
+    arrow.classList.toggle("rotate");
+}
+function selectOption(option) {
+    document.getElementById("selected-option").innerText = option; 
+    closeDropdown();
+}
+function closeDropdown() {
+    document.getElementById("dropdown").classList.remove("show");
+    document.querySelector(".arrow").classList.remove("rotate");
+}
