@@ -278,10 +278,20 @@ canvas {
   height: 12.5rem;
   display: flex;
 }
+@media (max-width: 580px) {
+  .test {
+    height: 8.75rem;
+  }
+}
 .test img {
   height: 100%;
   width: 100%;
   max-width: 15.625rem;
+}
+@media (max-width: 580px) {
+  .test img {
+    max-width: 5rem;
+  }
 }
 .test button {
   background-color: #A51421;
@@ -290,6 +300,21 @@ canvas {
   width: 100%;
   border: none;
   transition: 0.2s;
+}
+@media (max-width: 992px) {
+  .test button {
+    font-size: 3.75rem;
+  }
+}
+@media (max-width: 787px) {
+  .test button {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 580px) {
+  .test button {
+    font-size: 2.1875rem;
+  }
 }
 .test button:hover {
   background: #fff;
@@ -302,6 +327,12 @@ canvas {
   width: 200px;
   height: 100px;
   fill: #fff;
+}
+@media (max-width: 580px) {
+  .test button svg {
+    width: 150px;
+    height: 40px;
+  }
 }
 
 .all {
@@ -378,6 +409,12 @@ canvas {
   justify-content: center;
   max-height: 0;
   transition: max-height 0.6s ease-in-out;
+}
+@media (max-width: 580px) {
+  .all .hiddenSection .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }
 .all .hiddenSection .cards .img {
   flex: 1 1 20%;

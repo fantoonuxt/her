@@ -262,10 +262,19 @@ canvas {
 .test{
   height: rem(200px);
   display: flex;
+  @include media-breakpoint-down(sm) {
+    height: rem(140px);
+
+  }
   img{
     height: 100%;
     width: 100%;
     max-width: rem(250px);
+    @include media-breakpoint-down(sm) {
+      max-width: rem(80px);
+
+
+    }
   }
   button{
     background-color: #A51421;
@@ -274,6 +283,18 @@ canvas {
     width: 100%;
     border: none;
     transition: .2s;
+    @include media-breakpoint-down(lg) {
+      font-size: rem(60px);
+
+    }
+    @include media-breakpoint-down(md) {
+      font-size: rem(50px);
+
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(35px);
+
+    }
     &:hover{
       background: #fff;
       color: #000;
@@ -286,6 +307,10 @@ canvas {
       width: 200px;
       height: 100px;
       fill: #fff;
+      @include media-breakpoint-down(sm) {
+        width: 150px;
+        height: 40px;
+      }
     }
   }
 }
@@ -353,12 +378,17 @@ canvas {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      // overflow: hidden;
       max-height: 0;
       transition: max-height 0.6s ease-in-out;
+      @include media-breakpoint-down(sm) {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
       .img {
         flex: 1 1 20%;
         padding: 3px;
+
+    
         img{
           object-fit: cover;
           opacity: 0;
@@ -370,7 +400,7 @@ canvas {
         width: 100%;
         height: 100%;
         max-height: rem(350px);
-       
+
       }
     }
   }
@@ -396,4 +426,5 @@ canvas {
 
 }
   }
+  
 }
