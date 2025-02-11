@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 // @import "bootstrap/scss/mixins"; 
 @import url('./btn.css');
+@import url('./popup.css');
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -23,6 +24,9 @@ body {
   }
   @if $size == sm {
     @media (max-width: 580px) { @content; }
+  }
+  @if $size == xxs {
+    @media (max-width: 471px) { @content; }
   }
   @if $size == xs {
     @media (max-width: 370px) { @content; }
@@ -427,4 +431,26 @@ canvas {
 }
   }
   
+}
+.popup{
+  h2{
+    @include media-breakpoint-down(sm) {
+      font-size: 25px;
+    }
+  }
+  .scail{
+    text-align: center;
+    @include media-breakpoint-down(md) {
+      width: 50% !important;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 71% !important;
+    }
+    @include media-breakpoint-down(xxs) {
+      width: 85% !important;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 90% !important;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("./btn.css");
+@import url("./popup.css");
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -450,4 +451,33 @@ canvas {
   transform: scale(1) !important;
   opacity: 1 !important;
   transition-delay: 0.2s !important;
+}
+
+@media (max-width: 580px) {
+  .popup h2 {
+    font-size: 25px;
+  }
+}
+.popup .scail {
+  text-align: center;
+}
+@media (max-width: 787px) {
+  .popup .scail {
+    width: 50% !important;
+  }
+}
+@media (max-width: 580px) {
+  .popup .scail {
+    width: 71% !important;
+  }
+}
+@media (max-width: 471px) {
+  .popup .scail {
+    width: 85% !important;
+  }
+}
+@media (max-width: 370px) {
+  .popup .scail {
+    width: 90% !important;
+  }
 }/*# sourceMappingURL=app.css.map */
