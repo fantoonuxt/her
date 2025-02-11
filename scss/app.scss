@@ -321,6 +321,8 @@ canvas {
 
 .all{
   position: relative;
+  overflow: hidden;
+
   .findYourShade{
     text-align: center;
     padding: 100px 0;
@@ -331,7 +333,8 @@ canvas {
   background-position: center;
   transition: opacity 0.5s ease, height 0.5s ease;
   cursor: pointer;
-  
+  // height: 900px;
+
   @include media-breakpoint-down(lg) {
   
   height: rem(750px);
@@ -375,9 +378,10 @@ canvas {
   .hiddenSection{
     opacity: 0;
     visibility: hidden;
-    height: 0;
+    height: 0px;
+
     overflow: hidden;
-    transition: opacity 0.5s ease, height 0.5s ease;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -452,5 +456,72 @@ canvas {
     @include media-breakpoint-down(xs) {
       width: 90% !important;
     }
+  }
+}
+
+.footer {
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  color: white;
+  text-align: left;
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  p, li {
+      font-size: 18px;
+  }
+
+  a {
+      color: white;
+      // text-decoration: none;
+      // &:hover {
+      //     text-decoration: underline;
+      // }
+  }
+.fs-base{
+  font-size: 16px;
+  margin-top: 30px;
+}
+  .input-group {
+      max-width: 400px;
+      border: 2px solid  #FFF;
+     input{
+      background-color: transparent;
+      color: #fff;
+
+      outline: none !important;
+      border: none !important;
+     }
+     input::placeholder{
+      color: #fff;
+     }
+     button{
+      padding: 8px 10px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+     }
+  }
+.baianat{
+  text-decoration: underline !important;
+}
+  .footer-logo {
+    padding-top: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 70px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+    }
+  }
+.list-unstyled a{
+  text-decoration: none !important;
+}
+  .d-flex a {
+      font-size: 22px;
+      color: white;
   }
 }

@@ -338,6 +338,7 @@ canvas {
 
 .all {
   position: relative;
+  overflow: hidden;
 }
 .all .findYourShade {
   text-align: center;
@@ -400,9 +401,9 @@ canvas {
 .all .hiddenSection {
   opacity: 0;
   visibility: hidden;
-  height: 0;
+  height: 0px;
   overflow: hidden;
-  transition: opacity 0.5s ease, height 0.5s ease;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 .all .hiddenSection .cards {
   display: flex;
@@ -480,4 +481,76 @@ canvas {
   .popup .scail {
     width: 90% !important;
   }
+}
+
+.footer {
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  color: white;
+  text-align: left;
+  padding: 100px 0;
+}
+@media (max-width: 787px) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 580px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+.footer p, .footer li {
+  font-size: 18px;
+}
+.footer a {
+  color: white;
+}
+.footer .fs-base {
+  font-size: 16px;
+  margin-top: 30px;
+}
+.footer .input-group {
+  max-width: 400px;
+  border: 2px solid #FFF;
+}
+.footer .input-group input {
+  background-color: transparent;
+  color: #fff;
+  outline: none !important;
+  border: none !important;
+}
+.footer .input-group input::-moz-placeholder {
+  color: #fff;
+}
+.footer .input-group input::placeholder {
+  color: #fff;
+}
+.footer .input-group button {
+  padding: 8px 10px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.footer .baianat {
+  text-decoration: underline !important;
+}
+.footer .footer-logo {
+  padding-top: 100px;
+}
+@media (max-width: 787px) {
+  .footer .footer-logo {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 580px) {
+  .footer .footer-logo {
+    padding-top: 40px;
+  }
+}
+.footer .list-unstyled a {
+  text-decoration: none !important;
+}
+.footer .d-flex a {
+  font-size: 22px;
+  color: white;
 }/*# sourceMappingURL=app.css.map */
