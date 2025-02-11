@@ -11,3 +11,11 @@ function changeImage(element, image) {
   document.querySelectorAll('.color').forEach(color => color.classList.remove('active'));
   element.classList.add('active');
 }
+const shadeSection = document.getElementById("shadeSection");
+const hiddenSection = document.getElementById("hiddenSection");
+shadeSection.addEventListener("mouseenter", () => {
+    hiddenSection.classList.add("active");
+});
+shadeSection.addEventListener("mouseleave", () => {
+    hiddenSection.classList.remove("active");
+});
