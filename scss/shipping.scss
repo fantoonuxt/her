@@ -59,3 +59,145 @@ body {
     }
   }
 }
+
+.conditions{
+  padding-top: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38.4px;
+  color: #B8B8B8;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    &-lnk:nth-child(1) {
+      min-width: 250px !important;
+    }
+    &-lnk:not(:nth-child(1)) {
+      min-width: 200px !important;
+    }
+  }
+} 
+.active {
+  color: black;
+  text-decoration: none;
+  @include media-breakpoint-down(md) {
+    text-decoration: underline;
+  }
+}
+
+.condition {
+  &-head {
+    margin-bottom: 50px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 40px;
+    }
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 67.2px;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+      font-size: 22px;
+      margin-bottom: -10px;
+    }
+  }
+  &-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 31.25px;
+    color: #787878;
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
+  }
+  &-info {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
+  }
+}
+
+.content {
+  margin-bottom: 40px;
+  &-header {
+  font-weight: 500;
+  font-size: 24px;
+  }
+  &-body {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+.footer {
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  color: white;
+  text-align: left;
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  p, li {
+      font-size: 18px;
+  }
+
+  a {
+      color: white;
+      // text-decoration: none;
+      // &:hover {
+      //     text-decoration: underline;
+      // }
+  }
+.fs-base{
+  font-size: 16px;
+  margin-top: 30px;
+}
+  .input-group {
+      max-width: 400px;
+      border: 2px solid  #FFF;
+    input{
+      background-color: transparent;
+      color: #fff;
+
+      outline: none !important;
+      border: none !important;
+    }
+    input::placeholder{
+    color: #fff;
+    }
+    button{
+    padding: 8px 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    }
+  }
+.baianat{
+  text-decoration: underline !important;
+}
+  .footer-logo {
+    padding-top: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 70px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+    }
+  }
+.list-unstyled a{
+  text-decoration: none !important;
+}
+  .d-flex a {
+      font-size: 22px;
+      color: white;
+  }
+}
