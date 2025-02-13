@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+// @import "bootstrap/scss/mixins"; 
+@import url('./btn.css');
+@import url('./popup.css');
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  font-family: "DM Sans", serif !important;
+  // background-color: #000 !important;
+  // color: #FFF !important;
+}
+@function rem($size) {
+  @return #{$size / 16px}rem;
+}
+
+@mixin media-breakpoint-down($size) {
+  @if $size == lg {
+    @media (max-width: 992px) { @content; }
+  }
+  @if $size == md {
+    @media (max-width: 787px) { @content; }
+  }
+  @if $size == sm {
+    @media (max-width: 580px) { @content; }
+  }
+  @if $size == xxs {
+    @media (max-width: 471px) { @content; }
+  }
+  @if $size == xs {
+    @media (max-width: 370px) { @content; }
+  }
+}
+
+.app-Header{
+  height: rem(150px);
+
+  @include media-breakpoint-down(sm) {
+    height: rem(100px);
+
+  }
+  &-logo {
+    width: rem(250px);
+    display: block;
+    @include media-breakpoint-down(lg) {
+      width: rem(180px);
+    }
+    @include media-breakpoint-down(sm) {
+      width: rem(140px);
+    }
+    @include media-breakpoint-down(xs) {
+      width: rem(120px);
+    }
+    a {
+      &:hover {
+        color: currentColor;
+      }
+    }
+  }
+}
