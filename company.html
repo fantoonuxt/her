@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./scss/company.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <header class="position-absolute w-100">
+    <div class="container">
+      <div class="app-Header justify-content-between d-flex align-items-center">
+        <div class="app-Header-logo">
+          <img src="./static/images/logo.svg" alt="Logo">      
+        </div>
+        <div class="app-Header-mene  d-flex align-items-center gap-2">
+          <button class="button-outline  align-items-center gap-1 d-none d-md-flex" >
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 2.55048H17.5C17.6552 2.55048 17.8084 2.58662 17.9472 2.65605C18.0861 2.72548 18.2069 2.82628 18.3 2.95048L21 6.55048V21.5505C21 21.8157 20.8946 22.07 20.7071 22.2576C20.5196 22.4451 20.2652 22.5505 20 22.5505H4C3.73478 22.5505 3.48043 22.4451 3.29289 22.2576C3.10536 22.07 3 21.8157 3 21.5505V6.55048L5.7 2.95048C5.79315 2.82628 5.91393 2.72548 6.05279 2.65605C6.19164 2.58662 6.34475 2.55048 6.5 2.55048ZM19 8.55048H5V20.5505H19V8.55048ZM18.5 6.55048L17 4.55048H7L5.5 6.55048H18.5ZM9 10.5505V12.5505C9 13.3461 9.31607 14.1092 9.87868 14.6718C10.4413 15.2344 11.2044 15.5505 12 15.5505C12.7956 15.5505 13.5587 15.2344 14.1213 14.6718C14.6839 14.1092 15 13.3461 15 12.5505V10.5505H17V12.5505C17 13.8766 16.4732 15.1483 15.5355 16.086C14.5979 17.0237 13.3261 17.5505 12 17.5505C10.6739 17.5505 9.40215 17.0237 8.46447 16.086C7.52678 15.1483 7 13.8766 7 12.5505V10.5505H9Z"/>
+              </svg>
+              <span>Your Bag</span>              
+          </button>
+          <button class="button-border ms-2  align-items-center gap-1 d-none d-md-flex" id="loginBtn">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 22.5505H18V20.5505C18 19.7548 17.6839 18.9918 17.1213 18.4292C16.5587 17.8665 15.7956 17.5505 15 17.5505H9C8.20435 17.5505 7.44129 17.8665 6.87868 18.4292C6.31607 18.9918 6 19.7548 6 20.5505V22.5505H4V20.5505C4 19.2244 4.52678 17.9526 5.46447 17.0149C6.40215 16.0773 7.67392 15.5505 9 15.5505H15C16.3261 15.5505 17.5979 16.0773 18.5355 17.0149C19.4732 17.9526 20 19.2244 20 20.5505V22.5505ZM12 13.5505C11.2121 13.5505 10.4319 13.3953 9.7039 13.0938C8.97595 12.7922 8.31451 12.3503 7.75736 11.7931C7.20021 11.236 6.75825 10.5745 6.45672 9.84658C6.15519 9.11862 6 8.33841 6 7.55048C6 6.76254 6.15519 5.98233 6.45672 5.25438C6.75825 4.52642 7.20021 3.86499 7.75736 3.30784C8.31451 2.75068 8.97595 2.30873 9.7039 2.0072C10.4319 1.70567 11.2121 1.55048 12 1.55048C13.5913 1.55048 15.1174 2.18262 16.2426 3.30784C17.3679 4.43305 18 5.95918 18 7.55048C18 9.14178 17.3679 10.6679 16.2426 11.7931C15.1174 12.9183 13.5913 13.5505 12 13.5505ZM12 11.5505C13.0609 11.5505 14.0783 11.129 14.8284 10.3789C15.5786 9.62876 16 8.61134 16 7.55048C16 6.48961 15.5786 5.47219 14.8284 4.72205C14.0783 3.9719 13.0609 3.55048 12 3.55048C10.9391 3.55048 9.92172 3.9719 9.17157 4.72205C8.42143 5.47219 8 6.48961 8 7.55048C8 8.61134 8.42143 9.62876 9.17157 10.3789C9.92172 11.129 10.9391 11.5505 12 11.5505Z">
+              </svg>              
+              <span>login</span>              
+          </button>
+          <div class="d-flex gap-2 d-md-none">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 2.55048H17.5C17.6552 2.55048 17.8084 2.58662 17.9472 2.65605C18.0861 2.72548 18.2069 2.82628 18.3 2.95048L21 6.55048V21.5505C21 21.8157 20.8946 22.07 20.7071 22.2576C20.5196 22.4451 20.2652 22.5505 20 22.5505H4C3.73478 22.5505 3.48043 22.4451 3.29289 22.2576C3.10536 22.07 3 21.8157 3 21.5505V6.55048L5.7 2.95048C5.79315 2.82628 5.91393 2.72548 6.05279 2.65605C6.19164 2.58662 6.34475 2.55048 6.5 2.55048ZM19 8.55048H5V20.5505H19V8.55048ZM18.5 6.55048L17 4.55048H7L5.5 6.55048H18.5ZM9 10.5505V12.5505C9 13.3461 9.31607 14.1092 9.87868 14.6718C10.4413 15.2344 11.2044 15.5505 12 15.5505C12.7956 15.5505 13.5587 15.2344 14.1213 14.6718C14.6839 14.1092 15 13.3461 15 12.5505V10.5505H17V12.5505C17 13.8766 16.4732 15.1483 15.5355 16.086C14.5979 17.0237 13.3261 17.5505 12 17.5505C10.6739 17.5505 9.40215 17.0237 8.46447 16.086C7.52678 15.1483 7 13.8766 7 12.5505V10.5505H9Z" fill="white"/>
+              </svg>
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="iconBtn">
+                <path d="M20 22.5505H18V20.5505C18 19.7548 17.6839 18.9918 17.1213 18.4292C16.5587 17.8665 15.7956 17.5505 15 17.5505H9C8.20435 17.5505 7.44129 17.8665 6.87868 18.4292C6.31607 18.9918 6 19.7548 6 20.5505V22.5505H4V20.5505C4 19.2244 4.52678 17.9526 5.46447 17.0149C6.40215 16.0773 7.67392 15.5505 9 15.5505H15C16.3261 15.5505 17.5979 16.0773 18.5355 17.0149C19.4732 17.9526 20 19.2244 20 20.5505V22.5505ZM12 13.5505C11.2121 13.5505 10.4319 13.3953 9.7039 13.0938C8.97595 12.7922 8.31451 12.3503 7.75736 11.7931C7.20021 11.236 6.75825 10.5745 6.45672 9.84658C6.15519 9.11862 6 8.33841 6 7.55048C6 6.76254 6.15519 5.98233 6.45672 5.25438C6.75825 4.52642 7.20021 3.86499 7.75736 3.30784C8.31451 2.75068 8.97595 2.30873 9.7039 2.0072C10.4319 1.70567 11.2121 1.55048 12 1.55048C13.5913 1.55048 15.1174 2.18262 16.2426 3.30784C17.3679 4.43305 18 5.95918 18 7.55048C18 9.14178 17.3679 10.6679 16.2426 11.7931C15.1174 12.9183 13.5913 13.5505 12 13.5505ZM12 11.5505C13.0609 11.5505 14.0783 11.129 14.8284 10.3789C15.5786 9.62876 16 8.61134 16 7.55048C16 6.48961 15.5786 5.47219 14.8284 4.72205C14.0783 3.9719 13.0609 3.55048 12 3.55048C10.9391 3.55048 9.92172 3.9719 9.17157 4.72205C8.42143 5.47219 8 6.48961 8 7.55048C8 8.61134 8.42143 9.62876 9.17157 10.3789C9.92172 11.129 10.9391 11.5505 12 11.5505Z" fill="white">
+              </svg> 
+          </div>
+          <button class="button-bg ms-2 d-flex align-items-center gap-1">
+              <span>Shop Now</span>              
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="intro">
+    <div class="container">
+      <div class="content">
+          <h1>About</h1>
+          <img src="./static/images/logo.svg" alt="Logo">      
+
+      </div>
+    </div>
+</section>
+<section class="mainSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Our Story</h4>
+      </div>
+      <div class="col-md-6">
+        <p>It was in Ancient Egypt, a civilization renowned for its opulence and mystique, that cosmetics were first created. Pharaohs being pioneers in the art of beauty, left a mark in history; when one thinks of Pharoah Queens like Nefertiti and Cleopatra the imagery of their adorned vibrant makeup is automatically conjured, with lipstick playing an especially pivotal role in their beauty rituals. </p>
+        <p>This rich heritage is what inspired Her Nefer to emerge ; Her means face and Nefer means beauty in our ancient Pharaonic language. </p>
+        <p>We are choosing to channel the timeless allure of Ancient Egypt into modern, luxurious cosmetics. By blending tradition with innovation, Her Nefer offers a touch of ancient royal elegance to the women of today, redefining the concept of Egyptian beauty for a new era. </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mainSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./static/images/logo.svg" alt="Logo">      
+        <h4 class="mt-2">Leave Your Mark</h4>
+      </div>
+      <div class="col-md-6">
+        <p>Our product is officially licensed by the Egyptian Ministry of Health, ensuring
+          the highest standards of safety and compliance. Crafted with premium ingredients manufactured in Europe, our formulas meet the strict ethical and health regulations of the EU—because our customer’s safety is our top priority.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mainSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Our Vision</h5>   
+        <p class="vision">To redefine luxury beauty by inspiring women to embrace their individuality and feel confident in their unique expressions of elegance and style.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Our Mission</h5>
+        <p class="vision">To craft luxurious, curated beauty products that highlight individuality, enhance natural beauty, and elevate confidence, creating a transformative experience for modern women.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

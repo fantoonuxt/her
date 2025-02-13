@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("./btn.css");
+@import url("./popup.css");
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "DM Sans", serif !important;
+  background-color: #000 !important;
+  color: #FFF !important;
+}
+
+.app-Header {
+  height: 9.375rem;
+}
+@media (max-width: 580px) {
+  .app-Header {
+    height: 6.25rem;
+  }
+}
+.app-Header-logo {
+  width: 15.625rem;
+  display: block;
+}
+@media (max-width: 992px) {
+  .app-Header-logo {
+    width: 11.25rem;
+  }
+}
+@media (max-width: 580px) {
+  .app-Header-logo {
+    width: 8.75rem;
+  }
+}
+@media (max-width: 370px) {
+  .app-Header-logo {
+    width: 7.5rem;
+  }
+}
+.app-Header-logo a:hover {
+  color: currentColor;
+}
+
+.intro {
+  padding-top: 9.375rem;
+  padding-bottom: 9.375rem;
+  background-image: url("../static/images/company.png");
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  align-items: flex-end;
+  display: flex;
+  color: #fff;
+}
+.intro .content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.intro .content h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+@media (max-width: 787px) {
+  .intro .content h1 {
+    font-size: 4.375rem;
+  }
+}
+@media (max-width: 580px) {
+  .intro .content h1 {
+    font-size: 2.5rem;
+  }
+}
+.intro .content img {
+  width: 20.3125rem;
+  height: 4.3125rem;
+}
+@media (max-width: 580px) {
+  .intro .content img {
+    width: 12.5rem;
+    height: 4.3125rem;
+  }
+}
+
+.mainSection {
+  padding: 100px 0;
+}
+@media (max-width: 787px) {
+  .mainSection {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 580px) {
+  .mainSection {
+    padding: 40px 0;
+  }
+}
+.mainSection h4 {
+  font-weight: 400;
+  font-size: 4.0625rem;
+}
+@media (max-width: 787px) {
+  .mainSection h4 {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 580px) {
+  .mainSection h4 {
+    font-size: 2.1875rem;
+  }
+}
+.mainSection p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+@media (max-width: 580px) {
+  .mainSection p {
+    font-size: 1rem;
+  }
+}
+.mainSection img {
+  width: 20.3125rem;
+  height: 4.3125rem;
+}
+@media (max-width: 580px) {
+  .mainSection img {
+    width: 12.5rem;
+    height: 4.3125rem;
+  }
+}
+.mainSection h5 {
+  width: 16.4375rem;
+  font-size: 4.375rem;
+  font-weight: 400;
+}
+@media (max-width: 580px) {
+  .mainSection h5 {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 580px) {
+  .mainSection h5 {
+    font-size: 2.1875rem;
+  }
+}
+.mainSection .vision {
+  width: 100%;
+  max-width: 34.375rem;
+}/*# sourceMappingURL=company.css.map */

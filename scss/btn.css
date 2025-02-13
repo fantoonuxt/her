@@ -46,4 +46,55 @@
 }
 .button-bg:hover svg {
   fill: #fff;
+}
+
+.button-outline-dark {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+}
+.button-outline-dark svg {
+  fill: #000;
+}
+
+.button-border-dark {
+  background-color: transparent;
+  border: 2px solid #000;
+  padding: 8px 20px;
+  transition: 0.2s;
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+}
+.button-border-dark svg {
+  fill: #000;
+}
+.button-border-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+.button-border-dark:hover svg {
+  fill: #fff;
+}
+
+.button-bg-dark {
+  background-color: #000;
+  border: 2px solid #000;
+  padding: 8px 20px;
+  transition: 0.2s;
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+.button-bg-dark svg {
+  fill: #fff;
+}
+.button-bg-dark:hover {
+  background-color: transparent;
+  color: #000;
+}
+.button-bg-dark:hover svg {
+  fill: #000;
 }/*# sourceMappingURL=btn.css.map */

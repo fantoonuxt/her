@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("./btn.css");
+@import url("./popup.css");
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "DM Sans", serif !important;
+}
+
+.app-Header {
+  height: 9.375rem;
+}
+@media (max-width: 580px) {
+  .app-Header {
+    height: 6.25rem;
+  }
+}
+.app-Header-logo {
+  width: 15.625rem;
+  display: block;
+}
+@media (max-width: 992px) {
+  .app-Header-logo {
+    width: 11.25rem;
+  }
+}
+@media (max-width: 580px) {
+  .app-Header-logo {
+    width: 8.75rem;
+  }
+}
+@media (max-width: 370px) {
+  .app-Header-logo {
+    width: 7.5rem;
+  }
+}
+.app-Header-logo a:hover {
+  color: currentColor;
+}/*# sourceMappingURL=singleproduct.css.map */
