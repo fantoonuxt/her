@@ -300,7 +300,6 @@ canvas {
   font-size: 4.375rem;
   width: 100%;
   border: none;
-  transition: 0.2s;
 }
 @media (max-width: 992px) {
   .test button {
@@ -344,114 +343,80 @@ canvas {
   text-align: center;
   padding: 100px 0;
   background-image: url("../static/images/5.png");
-  height: 56.25rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transition: opacity 0.5s ease, height 0.5s ease;
+  transition: opacity 0.5s ease;
   cursor: pointer;
+  height: 900px;
 }
 @media (max-width: 992px) {
   .all .findYourShade {
-    height: 46.875rem;
+    height: 750px;
   }
 }
 @media (max-width: 787px) {
   .all .findYourShade {
     padding: 70px 0;
-    height: 46.875rem;
+    height: 750px;
   }
 }
 @media (max-width: 580px) {
   .all .findYourShade {
     padding: 40px 0;
-    height: 31.25rem;
+    height: 500px;
   }
-}
-.all .findYourShade h3 {
-  font-weight: 400;
-  font-size: 4.375rem;
-  margin-bottom: 20px;
-}
-@media (max-width: 787px) {
-  .all .findYourShade h3 {
-    font-size: 2.8125rem;
-  }
-}
-@media (max-width: 580px) {
-  .all .findYourShade h3 {
-    font-size: 2.1875rem;
-  }
-}
-.all .findYourShade .circle {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-}
-@media (max-width: 580px) {
-  .all .findYourShade .circle {
-    width: 50px;
-    height: 50px;
-  }
-}
-.all .findYourShade img {
-  width: 100%;
-  height: 100%;
 }
 .all .hiddenSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
   opacity: 0;
   visibility: hidden;
-  height: 0px;
-  overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 .all .hiddenSection .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-height: 0;
-  transition: max-height 0.6s ease-in-out;
+}
+@media (max-width: 992px) {
+  .all .hiddenSection .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media (max-width: 580px) {
   .all .hiddenSection .cards {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .all .hiddenSection .cards .img {
   flex: 1 1 20%;
-  padding: 3px;
 }
 .all .hiddenSection .cards .img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-}
-.all .hiddenSection .cards img {
   width: 100%;
   height: 100%;
   max-height: 21.875rem;
-}
-.all:hover .findYourShade {
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0;
-  height: 0;
-  padding: 0;
-  visibility: hidden;
+  transform: scale(0.8);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
-.all:hover .hiddenSection {
+.all:hover .findYourShade, .all:focus-within .findYourShade {
+  opacity: 0;
+}
+.all:hover .hiddenSection, .all:focus-within .hiddenSection {
   opacity: 1;
   visibility: visible;
-  height: auto;
 }
-.all:hover .cards {
-  max-height: 100%;
-}
-.all:hover .img img {
-  transform: scale(1) !important;
-  opacity: 1 !important;
-  transition-delay: 0.2s !important;
+.all:hover .hiddenSection .cards .img img, .all:focus-within .hiddenSection .cards .img img {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (max-width: 580px) {
