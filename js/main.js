@@ -62,3 +62,4 @@ function closeDropdown() {
     document.getElementById("dropdown").classList.remove("show");
     document.querySelector(".arrow").classList.remove("rotate");
 }
+//
