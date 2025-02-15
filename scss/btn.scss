@@ -39,7 +39,7 @@ font-weight: 400;
   }
  &:hover{
   background-color: transparent;
-  color: #fff;
+  color: #fff !important;
   svg{
     fill: #fff;
   }
@@ -68,7 +68,11 @@ svg{
   }
   &:hover {
    background-color: #000;
-   color: #fff;
+   color: #fff !important;
+   span{
+   color: #fff !important;
+
+   }
    svg{
     fill: #fff;
   }
@@ -82,12 +86,20 @@ svg{
   font-size: 17px;
 font-weight: 400;
 color: #fff;
+span{
+color: #fff !important;
+
+}
   svg{
     fill: #fff;
   }
  &:hover{
   background-color: transparent;
   color: #000;
+  span{
+    color: #000 !important;
+    
+    }
   svg{
     fill: #000;
   }

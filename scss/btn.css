@@ -42,7 +42,7 @@
 }
 .button-bg:hover {
   background-color: transparent;
-  color: #fff;
+  color: #fff !important;
 }
 .button-bg:hover svg {
   fill: #fff;
@@ -73,7 +73,10 @@
 }
 .button-border-dark:hover {
   background-color: #000;
-  color: #fff;
+  color: #fff !important;
+}
+.button-border-dark:hover span {
+  color: #fff !important;
 }
 .button-border-dark:hover svg {
   fill: #fff;
@@ -88,12 +91,18 @@
   font-weight: 400;
   color: #fff;
 }
+.button-bg-dark span {
+  color: #fff !important;
+}
 .button-bg-dark svg {
   fill: #fff;
 }
 .button-bg-dark:hover {
   background-color: transparent;
   color: #000;
+}
+.button-bg-dark:hover span {
+  color: #000 !important;
 }
 .button-bg-dark:hover svg {
   fill: #000;
