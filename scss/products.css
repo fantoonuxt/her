@@ -232,21 +232,53 @@ body {
   cursor: pointer;
   height: 900px;
 }
+@media (max-width: 1400px) {
+  .all .findYourShade {
+    height: 700px;
+  }
+}
 @media (max-width: 992px) {
   .all .findYourShade {
-    height: 750px;
+    height: 920px;
   }
 }
 @media (max-width: 787px) {
   .all .findYourShade {
-    padding: 70px 0;
     height: 750px;
   }
 }
 @media (max-width: 580px) {
   .all .findYourShade {
-    padding: 40px 0;
-    height: 500px;
+    height: 900px;
+  }
+}
+@media (max-width: 471px) {
+  .all .findYourShade {
+    height: 700px;
+  }
+}
+@media (max-width: 370px) {
+  .all .findYourShade {
+    height: 620px;
+  }
+}
+.all .findYourShade h3 {
+  font-weight: 400;
+  font-size: 3.75rem;
+}
+@media (max-width: 787px) {
+  .all .findYourShade h3 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 580px) {
+  .all .findYourShade h3 {
+    font-size: 2.1875rem;
+  }
+}
+@media (max-width: 370px) {
+  .all .findYourShade h3 {
+    font-size: 1.6875rem;
   }
 }
 .all .hiddenSection {

@@ -400,22 +400,47 @@ th {
     transition: opacity 0.5s ease;
     cursor: pointer;
   height: 900px;
-
-  @include media-breakpoint-down(lg) {
-  
-   height: 750px;
-  
-   }
+// 
+     @media(max-width:1400px) {
+        height: 700px;
+     }
+     @include media-breakpoint-down(lg) {
+      height: 920px;
+   
+     }
      @include media-breakpoint-down(md) {
-      padding: 70px 0;
      height: 750px;
   
     }
     @include media-breakpoint-down(sm) {
-       padding: 40px 0;
-    height: 500px;
+     
+    height: 900px;
   
  }
+ @include media-breakpoint-down(xxs) {
+     
+  height: 700px;
+
+}
+@include media-breakpoint-down(xs) {
+     
+  height: 620px;
+
+}
+
+h3{
+  font-weight: 400;
+  font-size: rem(60px);
+  @include media-breakpoint-down(md) {
+    font-size: rem(40px);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: rem(35px);
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: rem(27px);
+  }
+}
   }
 
   .hiddenSection {
@@ -450,7 +475,15 @@ th {
           object-fit: cover;
           opacity: 0;
           transform: scale(0.8);
+          
           transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+          
+  @include media-breakpoint-down(xl) {
+  
+    height: rem(240px);
+
+  
+   }
         }
       }
     }
