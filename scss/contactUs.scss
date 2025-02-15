@@ -63,35 +63,35 @@ body {
     height: 100%;
   }
 }
-.body {
-  --width: 10px;
+.app-body{
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 20px 0;
+  }
 }
-
 .form {
   background-color: #F7F7F7;
-  padding: 40px;
+    padding: 40px;
   label {
     display: block;
   }
   input {
-    max-width: $width;
+    min-width: 100%;
     display: block;
     outline: none;
     padding: 10px;
     margin: 10px 0 20px 0;
     border: 1.5px solid black;
     box-sizing: border-box;
-    
-  }
-  .iti__flag-container{
-    border: 1px solid black;;
-    background-color: white !important;
-  }
-  #phone{
-    padding-left: 100px !important;
   }
   textarea {
-    min-width: 33vw;
+    min-width: 100%;
     min-height: 150px;
     display: block;
     outline: none;
@@ -99,17 +99,77 @@ body {
     margin: 10px 0 20px 0;
     border: 1.5px solid black;
     box-sizing: border-box;
+    margin-bottom: 60px;
+  }
+  .send {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
   }
 }
 
-.flag {
-  background-color: red;
-}
 
 .header {
   font-size: 50px;
+  @include media-breakpoint-down(md) {
+    font-size: 40px;
+
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+
+  }
 }
 
+.img-done {
+  // width: 20px;
+  height: 4vh;
+  margin-bottom: 20px;
+}
+.block {
+  margin-bottom: 40px;
+  &-header {
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+.shop-now {
+  background-color: #F7F7F7;
+  padding: 40px 30px;
+  justify-content: space-between;
+  &-text {
+    width: 75%;
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+  &-btn {
+      width: 20%;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 400;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .footer {
   background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
   color: white;
