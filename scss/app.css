@@ -279,9 +279,24 @@ canvas {
   height: 12.5rem;
   display: flex;
 }
-@media (max-width: 580px) {
+@media (max-width: 992px) {
   .test {
     height: 8.75rem;
+  }
+}
+@media (max-width: 787px) {
+  .test {
+    height: 7.5rem;
+  }
+}
+@media (max-width: 580px) {
+  .test {
+    height: 6.25rem;
+  }
+}
+@media (max-width: 370px) {
+  .test {
+    height: 5rem;
   }
 }
 .test img {
@@ -303,17 +318,17 @@ canvas {
 }
 @media (max-width: 992px) {
   .test button {
-    font-size: 3.75rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 787px) {
   .test button {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 471px) {
   .test button {
-    font-size: 2.1875rem;
+    font-size: 1.5625rem;
   }
 }
 .test button:hover {
@@ -328,10 +343,22 @@ canvas {
   height: 100px;
   fill: #fff;
 }
-@media (max-width: 580px) {
+@media (max-width: 992px) {
   .test button svg {
-    width: 150px;
+    width: 100px;
+    height: 80px;
+  }
+}
+@media (max-width: 787px) {
+  .test button svg {
+    width: 80px;
     height: 40px;
+  }
+}
+@media (max-width: 471px) {
+  .test button svg {
+    width: 60px;
+    height: 20px;
   }
 }
 
@@ -350,11 +377,6 @@ canvas {
   cursor: pointer;
   height: 900px;
 }
-@media (max-width: 1400px) {
-  .all .findYourShade {
-    height: 700px;
-  }
-}
 @media (max-width: 992px) {
   .all .findYourShade {
     height: 920px;
@@ -367,15 +389,15 @@ canvas {
 }
 @media (max-width: 580px) {
   .all .findYourShade {
-    height: 900px;
+    height: 750px;
   }
 }
-@media (max-width: 471px) {
+@media (max-width: 370px) {
   .all .findYourShade {
     height: 700px;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 471px) {
   .all .findYourShade {
     height: 620px;
   }
@@ -409,21 +431,22 @@ canvas {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+.all .hiddenSection .mySwiper {
+  display: none;
+}
+@media (max-width: 992px) {
+  .all .hiddenSection .mySwiper {
+    display: block;
+  }
+}
 .all .hiddenSection .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .all .hiddenSection .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 580px) {
-  .all .hiddenSection .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: none;
   }
 }
 .all .hiddenSection .cards .img {

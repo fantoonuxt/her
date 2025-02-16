@@ -62,25 +62,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".mySwiper", {
       loop: true,
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
       grabCursor: true,  
       touchRatio: 1,   
       touchAngle: 45,   
       breakpoints: {
+        300: {
+          slidesPerView: 1.1,
+          },
         400: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.1,
           },
-          768: {
-              slidesPerView: 2,
+        500: {
+          slidesPerView: 1.7,
           },
-          1024: {
-              slidesPerView: 2.1,
-          }
+        767: {
+          slidesPerView: 2.2,
+          },
       }
   });
 });

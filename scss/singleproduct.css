@@ -314,9 +314,24 @@ body {
   height: 12.5rem;
   display: flex;
 }
-@media (max-width: 580px) {
+@media (max-width: 992px) {
   .test {
     height: 8.75rem;
+  }
+}
+@media (max-width: 787px) {
+  .test {
+    height: 7.5rem;
+  }
+}
+@media (max-width: 580px) {
+  .test {
+    height: 6.25rem;
+  }
+}
+@media (max-width: 370px) {
+  .test {
+    height: 5rem;
   }
 }
 .test img {
@@ -335,21 +350,20 @@ body {
   font-size: 4.375rem;
   width: 100%;
   border: none;
-  transition: 0.2s;
 }
 @media (max-width: 992px) {
   .test button {
-    font-size: 3.75rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 787px) {
   .test button {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 471px) {
   .test button {
-    font-size: 2.1875rem;
+    font-size: 1.5625rem;
   }
 }
 .test button:hover {
@@ -364,16 +378,30 @@ body {
   height: 100px;
   fill: #fff;
 }
-@media (max-width: 580px) {
+@media (max-width: 992px) {
   .test button svg {
-    width: 150px;
+    width: 100px;
+    height: 80px;
+  }
+}
+@media (max-width: 787px) {
+  .test button svg {
+    width: 80px;
     height: 40px;
+  }
+}
+@media (max-width: 471px) {
+  .test button svg {
+    width: 60px;
+    height: 20px;
   }
 }
 
 .all {
   position: relative;
   overflow: hidden;
+  color: white;
+  background-color: #000;
 }
 .all .findYourShade {
   text-align: center;
@@ -384,36 +412,31 @@ body {
   background-position: center;
   transition: opacity 0.5s ease;
   cursor: pointer;
-  height: 900px;
+  min-height: 390px;
 }
-@media (max-width: 1400px) {
+@media (min-width: 370px) {
   .all .findYourShade {
-    height: 700px;
+    min-height: 600px;
   }
 }
-@media (max-width: 992px) {
+@media (min-width: 580px) {
   .all .findYourShade {
-    height: 920px;
+    min-height: 800px;
   }
 }
-@media (max-width: 787px) {
+@media (min-width: 767px) {
   .all .findYourShade {
-    height: 750px;
+    min-height: 650px;
   }
 }
-@media (max-width: 580px) {
+@media (min-width: 992px) {
   .all .findYourShade {
-    height: 900px;
+    min-height: 700px;
   }
 }
-@media (max-width: 471px) {
+@media (min-width: 1200px) {
   .all .findYourShade {
-    height: 700px;
-  }
-}
-@media (max-width: 370px) {
-  .all .findYourShade {
-    height: 620px;
+    min-height: 900px;
   }
 }
 .all .findYourShade h3 {
@@ -445,21 +468,28 @@ body {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+.all .hiddenSection .mySwiper {
+  display: none;
+}
+.all .hiddenSection .mySwiper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 992px) {
+  .all .hiddenSection .mySwiper {
+    display: block;
+  }
+}
 .all .hiddenSection .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .all .hiddenSection .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 580px) {
-  .all .hiddenSection .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: none;
   }
 }
 .all .hiddenSection .cards .img {

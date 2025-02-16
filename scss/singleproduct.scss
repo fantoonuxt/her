@@ -36,6 +36,27 @@ body {
   }
 }
 
+@mixin media-breakpoint-up($size) {
+  @if $size == xl {
+    @media (min-width: 1200px) { @content; }
+  }
+  @if $size == lg {
+    @media (min-width: 992px) { @content; }
+  }
+  @if $size == md {
+    @media (min-width: 767px) { @content; }
+  }
+  @if $size == sm {
+    @media (min-width: 580px) { @content; }
+  }
+  @if $size == xxs {
+    @media (min-width: 471px) { @content; }
+  }
+  @if $size == xs {
+    @media (min-width: 370px) { @content; }
+  }
+}
+
 .app-Header{
   height: rem(150px);
 
@@ -258,15 +279,6 @@ th {
 }
 }
 
-
-
-
-
-
-
-
-
-
 .intro-swiper{
   background-color: #000;
   padding: 100px 0;
@@ -334,9 +346,17 @@ th {
 .test{
   height: rem(200px);
   display: flex;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(lg) {
     height: rem(140px);
-
+  }
+  @include media-breakpoint-down(md) {
+    height: rem(120px);
+  }
+  @include media-breakpoint-down(sm) {
+    height: rem(100px);
+  }
+  @include media-breakpoint-down(xs) {
+    height: rem(80px);
   }
   img{
     height: 100%;
@@ -344,8 +364,6 @@ th {
     max-width: rem(250px);
     @include media-breakpoint-down(sm) {
       max-width: rem(80px);
-
-
     }
   }
   button{
@@ -354,18 +372,17 @@ th {
     font-size: rem(70px);
     width: 100%;
     border: none;
-    transition: .2s;
     @include media-breakpoint-down(lg) {
-      font-size: rem(60px);
-
+      font-size: rem(40px);
     }
     @include media-breakpoint-down(md) {
-      font-size: rem(50px);
-
+      font-size: rem(40px);
     }
-    @include media-breakpoint-down(sm) {
-      font-size: rem(35px);
-
+    // @include media-breakpoint-down(xs) {
+    //   font-size: rem(20px);
+    // }
+    @include media-breakpoint-down(xxs) {
+      font-size: rem(25px);
     }
     &:hover{
       background: #fff;
@@ -379,9 +396,17 @@ th {
       width: 200px;
       height: 100px;
       fill: #fff;
-      @include media-breakpoint-down(sm) {
-        width: 150px;
+      @include media-breakpoint-down(lg) {
+        width: 100px;
+        height: 80px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 80px;
         height: 40px;
+      }
+      @include media-breakpoint-down(xxs) {
+        width: 60px;
+        height: 20px;
       }
     }
   }
@@ -389,7 +414,8 @@ th {
 .all {
   position: relative;
   overflow: hidden;
-
+  color: white;
+  background-color: #000;
   .findYourShade {
     text-align: center;
     padding: 100px 0;
@@ -399,35 +425,23 @@ th {
     background-position: center;
     transition: opacity 0.5s ease;
     cursor: pointer;
-  height: 900px;
-// 
-     @media(max-width:1400px) {
-        height: 700px;
-     }
-     @include media-breakpoint-down(lg) {
-      height: 920px;
-   
-     }
-     @include media-breakpoint-down(md) {
-     height: 750px;
-  
+    min-height: 390px;
+    @include media-breakpoint-up(xs) {
+      min-height: 600px;
     }
-    @include media-breakpoint-down(sm) {
-     
-    height: 900px;
-  
- }
- @include media-breakpoint-down(xxs) {
-     
-  height: 700px;
-
-}
-@include media-breakpoint-down(xs) {
-     
-  height: 620px;
-
-}
-
+    @include media-breakpoint-up(sm) {
+      min-height: 800px;
+    }
+    @include media-breakpoint-up(md) {
+      min-height: 650px;
+    }
+    @include media-breakpoint-up(lg) {
+      min-height: 700px;
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: 900px;
+    }
+    
 h3{
   font-weight: 400;
   font-size: rem(60px);
@@ -442,7 +456,6 @@ h3{
   }
 }
   }
-
   .hiddenSection {
     position: absolute;
     top: 0;
@@ -452,20 +465,24 @@ h3{
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-
+    .mySwiper {
+      display: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+    }
     .cards {
-      display: flex;
+      display:flex;
       flex-wrap: wrap;
       justify-content: center;
-      @include media-breakpoint-down(xl) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+      @include media-breakpoint-down(lg) {
+        display: none;
       }
-      @include media-breakpoint-down(sm) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-      }
-
       .img {
         flex: 1 1 20%;
         img {
@@ -475,15 +492,10 @@ h3{
           object-fit: cover;
           opacity: 0;
           transform: scale(0.8);
-          
           transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-          
-  @include media-breakpoint-down(xl) {
-  
-    height: rem(240px);
-
-  
-   }
+          @include media-breakpoint-down(xl) {
+            height: rem(240px);
+          }
         }
       }
     }

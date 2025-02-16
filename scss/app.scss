@@ -272,9 +272,17 @@ canvas {
 .test{
   height: rem(200px);
   display: flex;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(lg) {
     height: rem(140px);
-
+  }
+  @include media-breakpoint-down(md) {
+    height: rem(120px);
+  }
+  @include media-breakpoint-down(sm) {
+    height: rem(100px);
+  }
+  @include media-breakpoint-down(xs) {
+    height: rem(80px);
   }
   img{
     height: 100%;
@@ -282,8 +290,6 @@ canvas {
     max-width: rem(250px);
     @include media-breakpoint-down(sm) {
       max-width: rem(80px);
-
-
     }
   }
   button{
@@ -293,16 +299,16 @@ canvas {
     width: 100%;
     border: none;
     @include media-breakpoint-down(lg) {
-      font-size: rem(60px);
-
+      font-size: rem(40px);
     }
     @include media-breakpoint-down(md) {
-      font-size: rem(50px);
-
+      font-size: rem(40px);
     }
-    @include media-breakpoint-down(sm) {
-      font-size: rem(35px);
-
+    // @include media-breakpoint-down(xs) {
+    //   font-size: rem(20px);
+    // }
+    @include media-breakpoint-down(xxs) {
+      font-size: rem(25px);
     }
     &:hover{
       background: #fff;
@@ -316,13 +322,22 @@ canvas {
       width: 200px;
       height: 100px;
       fill: #fff;
-      @include media-breakpoint-down(sm) {
-        width: 150px;
+      @include media-breakpoint-down(lg) {
+        width: 100px;
+        height: 80px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 80px;
         height: 40px;
+      }
+      @include media-breakpoint-down(xxs) {
+        width: 60px;
+        height: 20px;
       }
     }
   }
 }
+
 .all {
   position: relative;
   overflow: hidden;
@@ -336,34 +351,25 @@ canvas {
     background-position: center;
     transition: opacity 0.5s ease;
     cursor: pointer;
-  height: 900px;
-// 
-     @media(max-width:1400px) {
-        height: 700px;
-     }
-     @include media-breakpoint-down(lg) {
+    height: 900px;
+    @include media-breakpoint-down(lg) {
       height: 920px;
-   
-     }
-     @include media-breakpoint-down(md) {
-     height: 750px;
-  
+    }
+    @include media-breakpoint-down(md) {
+      height: 750px;
     }
     @include media-breakpoint-down(sm) {
-     
-    height: 900px;
-  
- }
- @include media-breakpoint-down(xxs) {
-     
-  height: 700px;
+    height: 750px;
+    }
+    @include media-breakpoint-down(xs) {
+        
+      height: 700px;
 
-}
-@include media-breakpoint-down(xs) {
-     
-  height: 620px;
-
-}
+    }
+    @include media-breakpoint-down(xxs) {
+        
+      height: 620px;
+    }
 
 h3{
   font-weight: 400;
@@ -379,7 +385,6 @@ h3{
   }
 }
   }
-
   .hiddenSection {
     position: absolute;
     top: 0;
@@ -389,20 +394,19 @@ h3{
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-
+    .mySwiper {
+      display: none;
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+    }
     .cards {
-      display: flex;
+      display:flex;
       flex-wrap: wrap;
       justify-content: center;
-      @include media-breakpoint-down(xl) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+      @include media-breakpoint-down(lg) {
+        display: none;
       }
-      @include media-breakpoint-down(sm) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-      }
-
       .img {
         flex: 1 1 20%;
         img {
@@ -415,12 +419,9 @@ h3{
           
           transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
           
-  @include media-breakpoint-down(xl) {
-  
-    height: rem(240px);
-
-  
-   }
+          @include media-breakpoint-down(xl) {
+            height: rem(240px);
+          }
         }
       }
     }
