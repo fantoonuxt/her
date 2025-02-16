@@ -48,7 +48,7 @@ body {
 .app-body {
   padding: 100px 0;
 }
-@media (max-width: 787px) {
+@media (max-width: 767px) {
   .app-body {
     padding: 70px 0;
   }
@@ -109,7 +109,7 @@ body {
 .header {
   font-size: 50px;
 }
-@media (max-width: 787px) {
+@media (max-width: 767px) {
   .header {
     font-size: 40px;
   }
@@ -135,19 +135,14 @@ body {
 
 .shop-now {
   background-color: #F7F7F7;
-  padding: 40px 30px;
-  justify-content: space-between;
-}
-.shop-now-text {
-  width: 75%;
+  padding: 40px 40px;
 }
 @media (max-width: 992px) {
   .shop-now-text {
-    width: 100%;
+    margin-bottom: 20px;
   }
 }
 .shop-now-btn {
-  width: 20%;
   padding: 10px 20px;
   background-color: black;
   color: white;
@@ -157,14 +152,21 @@ body {
   font-weight: 400;
 }
 @media (max-width: 992px) {
-  .shop-now-btn {
-    width: 100%;
+  .shop-now {
+    width: 150%;
+    margin-left: -4.375rem;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .shop-now {
-    flex-direction: column;
-    gap: 30px;
+    width: 100%;
+    margin-left: 0rem;
+  }
+}
+@media (max-width: 580px) {
+  .shop-now {
+    width: 100%;
+    margin-left: 0rem;
   }
 }
 
@@ -174,7 +176,7 @@ body {
   text-align: left;
   padding: 100px 0;
 }
-@media (max-width: 787px) {
+@media (max-width: 767px) {
   .footer {
     padding: 70px 0;
   }
@@ -222,7 +224,7 @@ body {
 .footer .footer-logo {
   padding-top: 100px;
 }
-@media (max-width: 787px) {
+@media (max-width: 767px) {
   .footer .footer-logo {
     padding-top: 70px;
   }

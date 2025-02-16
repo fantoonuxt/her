@@ -20,7 +20,7 @@ body {
     @media (max-width: 992px) { @content; }
   }
   @if $size == md {
-    @media (max-width: 787px) { @content; }
+    @media (max-width: 767px) { @content; }
   }
   @if $size == sm {
     @media (max-width: 580px) { @content; }
@@ -144,16 +144,15 @@ body {
 }
 .shop-now {
   background-color: #F7F7F7;
-  padding: 40px 30px;
-  justify-content: space-between;
+  padding: 40px 40px;
+  // justify-content: space-between;
   &-text {
-    width: 75%;
     @include media-breakpoint-down(lg) {
-      width: 100%;
+      // width: 100%;
+      margin-bottom: 20px;
     }
   }
   &-btn {
-      width: 20%;
       padding: 10px 20px;
       background-color: black;
       color: white;
@@ -161,13 +160,18 @@ body {
       cursor: pointer;
       font-size: 16px;
       font-weight: 400;
-      @include media-breakpoint-down(lg) {
-        width: 100%;
-      }
     }
   @include media-breakpoint-down(lg) {
-    flex-direction: column;
-    gap: 30px;
+    width: 150%;
+    margin-left: rem(-70px);
+  }
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    margin-left: rem(0px);
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: rem(0px);
   }
 }
 .footer {
