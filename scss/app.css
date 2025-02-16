@@ -365,6 +365,8 @@ canvas {
 .all {
   position: relative;
   overflow: hidden;
+  color: white;
+  background-color: #000;
 }
 .all .findYourShade {
   text-align: center;
@@ -375,31 +377,31 @@ canvas {
   background-position: center;
   transition: opacity 0.5s ease;
   cursor: pointer;
-  height: 900px;
+  min-height: 390px;
 }
-@media (max-width: 992px) {
+@media (min-width: 370px) {
   .all .findYourShade {
-    height: 920px;
+    min-height: 600px;
   }
 }
-@media (max-width: 787px) {
+@media (min-width: 580px) {
   .all .findYourShade {
-    height: 750px;
+    min-height: 800px;
   }
 }
-@media (max-width: 580px) {
+@media (min-width: 767px) {
   .all .findYourShade {
-    height: 750px;
+    min-height: 650px;
   }
 }
-@media (max-width: 370px) {
+@media (min-width: 992px) {
   .all .findYourShade {
-    height: 700px;
+    min-height: 700px;
   }
 }
-@media (max-width: 471px) {
+@media (min-width: 1200px) {
   .all .findYourShade {
-    height: 620px;
+    min-height: 900px;
   }
 }
 .all .findYourShade h3 {
@@ -433,6 +435,12 @@ canvas {
 }
 .all .hiddenSection .mySwiper {
   display: none;
+}
+.all .hiddenSection .mySwiper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 992px) {
   .all .hiddenSection .mySwiper {
