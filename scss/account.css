@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("./btn.css");
+@import url("./popup.css");
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "DM Sans", serif !important;
+}
+
+.app-Header {
+  height: 9.375rem;
+}
+@media (max-width: 580px) {
+  .app-Header {
+    height: 6.25rem;
+  }
+}
+.app-Header-logo {
+  width: 15.625rem;
+  display: block;
+}
+@media (max-width: 992px) {
+  .app-Header-logo {
+    width: 11.25rem;
+  }
+}
+@media (max-width: 580px) {
+  .app-Header-logo {
+    width: 8.75rem;
+  }
+}
+@media (max-width: 370px) {
+  .app-Header-logo {
+    width: 7.5rem;
+  }
+}
+.app-Header-logo a:hover {
+  color: currentColor;
+}
+.app-Header-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.successfully {
+  font-size: 20px;
+  font-weight: 500;
+  width: 370px;
+}
+
+.intro {
+  padding: 100px 0;
+}
+@media (max-width: 787px) {
+  .intro {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 580px) {
+  .intro {
+    padding: 40px 0;
+  }
+}
+.intro .heeder {
+  display: flex;
+  align-items: center;
+}
+.intro .heeder a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+.intro .body {
+  padding: 100px 0;
+}
+@media (max-width: 787px) {
+  .intro .body {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 580px) {
+  .intro .body {
+    padding: 40px 0;
+  }
+}
+.intro .body a, .intro .body .logout {
+  font-size: 28px;
+  color: #B8B8B8;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+.intro .body a.active {
+  color: #000 !important;
+}
+.intro .body hr {
+  color: #000;
+}
+.intro form input {
+  min-width: 100%;
+  display: block;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1.5px solid black;
+  box-sizing: border-box;
+}
+
+.widh {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.widh .add-order {
+  margin: 10px 0;
+  width: 322px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.widh p {
+  width: 422px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.app-cards {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+.app-cards .app-cards-img {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.app-cards .app-cards-img img {
+  width: 100%;
+  height: auto;
+  grid-area: 1/1;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.app-cards .app-cards-img img:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
+.app-cards:hover .app-cards-img img:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+.app-cards:hover .app-cards-img img:last-child {
+  opacity: 1;
+  visibility: visible;
+}
+
+.second-section {
+  padding: 0px 0 100px;
+}
+@media (max-width: 787px) {
+  .second-section {
+    padding: 0px 0 100px;
+  }
+}
+@media (max-width: 580px) {
+  .second-section {
+    padding: 0px 0 100px;
+  }
+}
+.second-section h3 {
+  font-size: 3.125rem;
+  font-weight: 500;
+}
+
+.footer {
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  color: white;
+  text-align: left;
+  padding: 100px 0;
+}
+@media (max-width: 787px) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 580px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+.footer p, .footer li {
+  font-size: 18px;
+}
+.footer a {
+  color: white;
+}
+.footer .fs-base {
+  font-size: 16px;
+  margin-top: 30px;
+}
+.footer .input-group {
+  max-width: 400px;
+  border: 2px solid #FFF;
+}
+.footer .input-group input {
+  background-color: transparent;
+  color: #fff;
+  outline: none !important;
+  border: none !important;
+}
+.footer .input-group input::-moz-placeholder {
+  color: #fff;
+}
+.footer .input-group input::placeholder {
+  color: #fff;
+}
+.footer .input-group button {
+  padding: 8px 10px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.footer .baianat {
+  text-decoration: underline !important;
+}
+.footer .footer-logo {
+  padding-top: 100px;
+}
+@media (max-width: 787px) {
+  .footer .footer-logo {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 580px) {
+  .footer .footer-logo {
+    padding-top: 40px;
+  }
+}
+.footer .list-unstyled a {
+  text-decoration: none !important;
+}
+.footer .d-flex a {
+  font-size: 22px;
+  color: white;
+}/*# sourceMappingURL=account.css.map */
