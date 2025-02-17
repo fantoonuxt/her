@@ -16,20 +16,26 @@ body {
 }
 
 @mixin media-breakpoint-down($size) {
-  @if $size == lg {
+  @if $size == xl {
+    @media (max-width: 1440px) { @content; }
+  } @else if $size == lg {
     @media (max-width: 992px) { @content; }
+  } @else if $size == md {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == sm {
+    @media (max-width: 576px) { @content; }
+  } @else if $size == xs {
+    @media (max-width: 375px) { @content; }
+  } @else if $size == xxs {
+    @media (max-width: 320px) { @content; }
+  } @else if $size == xxl {
+    @media (max-width: 2560px) { @content; } 
   }
-  @if $size == md {
-    @media (max-width: 787px) { @content; }
-  }
-  @if $size == sm {
-    @media (max-width: 580px) { @content; }
-  }
-  @if $size == xxs {
-    @media (max-width: 471px) { @content; }
-  }
-  @if $size == xs {
-    @media (max-width: 370px) { @content; }
+}
+
+@mixin media-bootstrap($size) {
+  @if $size == xl {
+    @media (max-width: 1140px) { @content; }
   }
 }
 
@@ -37,12 +43,18 @@ body {
   height: rem(150px);
 
   @include media-breakpoint-down(sm) {
-    height: rem(100px);
+    height: rem(70px);
 
   }
   &-logo {
     width: rem(250px);
     display: block;
+    @include media-breakpoint-down(xxl) {
+      width: rem(280px);
+    }
+    @include media-breakpoint-down(xl) {
+      width: rem(220px);
+    }
     @include media-breakpoint-down(lg) {
       width: rem(180px);
     }
@@ -61,7 +73,7 @@ body {
 }
 .intro{
   padding-top: rem(150px);
-  padding-bottom: rem(150px);
+  padding-bottom : 0px;
   background-image: url('../static/images/company.png');
   object-fit: contain;
   background-repeat: no-repeat;
@@ -71,9 +83,24 @@ body {
   // top: 0;
   z-index: -1;
   height: 100vh;
-  align-items: flex-end;
   display: flex;
+  align-items: flex-end;
   color: #fff;
+  @include media-breakpoint-down(xxl) {
+    padding-bottom: rem(150px);
+  }
+  @include media-breakpoint-down(xl) {
+    padding-bottom: rem(100px);
+  }
+  @include media-breakpoint-down(lg) {
+    padding-bottom: rem(50px);
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: rem(20px);
+  }
+  @include media-breakpoint-down(sm) {
+    height: 50vh;
+  }
   .content {
     display: flex;
     gap: 16px;
@@ -81,18 +108,38 @@ body {
   h1{
     font-size: rem(80px);
     font-weight: 500;
+    @include media-breakpoint-down(xxl) {
+      font-size: rem(120px);
+    }
+    @include media-breakpoint-down(xl) {
+      font-size: rem(90px);
+    }
+    // @include media-breakpoint-down(lg) {
+    //   font-size: rem(90px);
+    // }
     @include media-breakpoint-down(md) {
       font-size: rem(70px);
     }
     @include media-breakpoint-down(sm) {
+      font-size: rem(50px);
+    }
+    @include media-breakpoint-down(xs) {
       font-size: rem(40px);
     }
   }
   img{
     width: rem(325px);
     height: rem(69px);
+    @include media-breakpoint-down(xxl) {
+      width: rem(400px);
+      height: rem(69px);
+    }
     @include media-breakpoint-down(sm) {
       width: rem(200px);
+      height: rem(69px);
+    }
+    @include media-breakpoint-down(xs) {
+      width: rem(150px);
       height: rem(69px);
     }
   }
@@ -100,15 +147,34 @@ body {
 }
 .mainSection{
   padding: 100px 0;
+  margin: auto;
+  @include media-breakpoint-down(xxl) {
+    padding: 80px 0;
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 60px 0;
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 50px 0;
+  }
   @include media-breakpoint-down(md) {
-    padding: 70px 0;
+    padding: 40px 0;
   }
   @include media-breakpoint-down(sm) {
-    padding: 40px 0;
+    padding: 30px 0;
+  }
+  .block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
   }
   h4{
     font-weight: 400;
-    font-size: rem(65px);
+    font-size: rem(65px);;
     @include media-breakpoint-down(md) {
       font-size: rem(50px);
     }
@@ -119,6 +185,9 @@ body {
   p{
     font-size: rem(18px);
     font-weight: 400;
+    @include media-breakpoint-down(xxl) {
+      font-size: rem(24px);
+    }
     @include media-breakpoint-down(sm) {
       font-size: rem(16px);
     }

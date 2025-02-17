@@ -7,6 +7,31 @@
 }
 .button-outline svg {
   fill: #fff;
+  width: 40px;
+}
+@media (max-width: 2600px) {
+  .button-outline {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: 1440px) {
+  .button-outline {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 992px) {
+  .button-outline {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button-outline {
+    font-size: 15px;
+    padding: 6px 15px;
+  }
 }
 
 .button-border {
@@ -20,6 +45,30 @@
 }
 .button-border svg {
   fill: #fff;
+}
+@media (max-width: 2600px) {
+  .button-border {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: 1440px) {
+  .button-border {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 992px) {
+  .button-border {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button-border {
+    font-size: 15px;
+    padding: 6px 15px;
+  }
 }
 .button-border:hover {
   background-color: #fff;
@@ -36,6 +85,30 @@
   transition: 0.2s;
   font-size: 17px;
   font-weight: 400;
+}
+@media (max-width: 2600px) {
+  .button-bg {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: 1440px) {
+  .button-bg {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 992px) {
+  .button-bg {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button-bg {
+    font-size: 15px;
+    padding: 6px 15px;
+  }
 }
 .button-bg svg {
   fill: #000;
@@ -58,6 +131,30 @@
 .button-outline-dark svg {
   fill: #000;
 }
+@media (max-width: 2600px) {
+  .button-outline-dark {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: 1440px) {
+  .button-outline-dark {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 992px) {
+  .button-outline-dark {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button-outline-dark {
+    font-size: 15px;
+    padding: 6px 15px;
+  }
+}
 
 .button-border-dark {
   background-color: transparent;
@@ -70,6 +167,30 @@
 }
 .button-border-dark svg {
   fill: #000;
+}
+@media (max-width: 2600px) {
+  .button-border-dark {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: 1440px) {
+  .button-border-dark {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 992px) {
+  .button-border-dark {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button-border-dark {
+    font-size: 15px;
+    padding: 6px 15px;
+  }
 }
 .button-border-dark:hover {
   background-color: #000;
@@ -93,6 +214,30 @@
 }
 .button-bg-dark span {
   color: #fff !important;
+}
+@media (max-width: 2600px) {
+  .button-bg-dark {
+    font-size: 20px;
+    padding: 12px 35px;
+  }
+}
+@media (max-width: 1440px) {
+  .button-bg-dark {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 992px) {
+  .button-bg-dark {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button-bg-dark {
+    font-size: 15px;
+    padding: 6px 15px;
+  }
 }
 .button-bg-dark svg {
   fill: #fff;

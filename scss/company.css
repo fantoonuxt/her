@@ -15,26 +15,36 @@ body {
 .app-Header {
   height: 9.375rem;
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .app-Header {
-    height: 6.25rem;
+    height: 4.375rem;
   }
 }
 .app-Header-logo {
   width: 15.625rem;
   display: block;
 }
+@media (max-width: 2560px) {
+  .app-Header-logo {
+    width: 17.5rem;
+  }
+}
+@media (max-width: 1440px) {
+  .app-Header-logo {
+    width: 13.75rem;
+  }
+}
 @media (max-width: 992px) {
   .app-Header-logo {
     width: 11.25rem;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .app-Header-logo {
     width: 8.75rem;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 375px) {
   .app-Header-logo {
     width: 7.5rem;
   }
@@ -45,7 +55,7 @@ body {
 
 .intro {
   padding-top: 9.375rem;
-  padding-bottom: 9.375rem;
+  padding-bottom: 0px;
   background-image: url("../static/images/company.png");
   -o-object-fit: contain;
      object-fit: contain;
@@ -55,9 +65,34 @@ body {
   position: relative;
   z-index: -1;
   height: 100vh;
-  align-items: flex-end;
   display: flex;
+  align-items: flex-end;
   color: #fff;
+}
+@media (max-width: 2560px) {
+  .intro {
+    padding-bottom: 9.375rem;
+  }
+}
+@media (max-width: 1440px) {
+  .intro {
+    padding-bottom: 6.25rem;
+  }
+}
+@media (max-width: 992px) {
+  .intro {
+    padding-bottom: 3.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .intro {
+    padding-bottom: 1.25rem;
+  }
+}
+@media (max-width: 576px) {
+  .intro {
+    height: 50vh;
+  }
 }
 .intro .content {
   display: flex;
@@ -68,12 +103,27 @@ body {
   font-size: 5rem;
   font-weight: 500;
 }
-@media (max-width: 787px) {
+@media (max-width: 2560px) {
+  .intro .content h1 {
+    font-size: 7.5rem;
+  }
+}
+@media (max-width: 1440px) {
+  .intro .content h1 {
+    font-size: 5.625rem;
+  }
+}
+@media (max-width: 768px) {
   .intro .content h1 {
     font-size: 4.375rem;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
+  .intro .content h1 {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 375px) {
   .intro .content h1 {
     font-size: 2.5rem;
   }
@@ -82,36 +132,74 @@ body {
   width: 20.3125rem;
   height: 4.3125rem;
 }
-@media (max-width: 580px) {
+@media (max-width: 2560px) {
+  .intro .content img {
+    width: 25rem;
+    height: 4.3125rem;
+  }
+}
+@media (max-width: 576px) {
   .intro .content img {
     width: 12.5rem;
+    height: 4.3125rem;
+  }
+}
+@media (max-width: 375px) {
+  .intro .content img {
+    width: 9.375rem;
     height: 4.3125rem;
   }
 }
 
 .mainSection {
   padding: 100px 0;
+  margin: auto;
 }
-@media (max-width: 787px) {
+@media (max-width: 2560px) {
   .mainSection {
-    padding: 70px 0;
+    padding: 80px 0;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 1440px) {
+  .mainSection {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 992px) {
+  .mainSection {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 768px) {
   .mainSection {
     padding: 40px 0;
+  }
+}
+@media (max-width: 576px) {
+  .mainSection {
+    padding: 30px 0;
+  }
+}
+.mainSection .block {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .mainSection .block {
+    flex-direction: column;
   }
 }
 .mainSection h4 {
   font-weight: 400;
   font-size: 4.0625rem;
 }
-@media (max-width: 787px) {
+@media (max-width: 768px) {
   .mainSection h4 {
     font-size: 3.125rem;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .mainSection h4 {
     font-size: 2.1875rem;
   }
@@ -120,7 +208,12 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
 }
-@media (max-width: 580px) {
+@media (max-width: 2560px) {
+  .mainSection p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
   .mainSection p {
     font-size: 1rem;
   }
@@ -129,7 +222,7 @@ body {
   width: 20.3125rem;
   height: 4.3125rem;
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .mainSection img {
     width: 12.5rem;
     height: 4.3125rem;
@@ -140,12 +233,12 @@ body {
   font-size: 4.375rem;
   font-weight: 400;
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .mainSection h5 {
     font-size: 3.125rem;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .mainSection h5 {
     font-size: 2.1875rem;
   }

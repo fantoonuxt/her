@@ -197,6 +197,11 @@ canvas {
     padding: 40px 0;
   }
 }
+@media (max-width: 370px) {
+  .about-us {
+    padding: 20px 0;
+  }
+}
 .about-us-img {
   width: 18.75rem;
   height: 4.375rem;
@@ -451,6 +456,7 @@ canvas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 @media (max-width: 992px) {
   .all .hiddenSection .cards {
@@ -458,7 +464,7 @@ canvas {
   }
 }
 .all .hiddenSection .cards .img {
-  flex: 1 1 20%;
+  flex: 1 1 19%;
 }
 .all .hiddenSection .cards .img img {
   width: 100%;
