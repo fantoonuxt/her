@@ -51,43 +51,43 @@ body {
   width: 370px;
 }
 
-.intro {
+.my-intro {
   padding: 100px 0;
 }
 @media (max-width: 787px) {
-  .intro {
+  .my-intro {
     padding: 0px 0;
   }
 }
 @media (max-width: 580px) {
-  .intro {
+  .my-intro {
     padding: 40px 0;
   }
 }
 @media (max-width: 1200px) {
-  .intro {
+  .my-intro {
     padding: 20px 0;
   }
 }
-.intro .heeder {
+.my-intro .heeder {
   display: flex;
   align-items: center;
 }
-.intro .heeder a {
+.my-intro .heeder a {
   text-decoration: none;
   color: #000;
   font-size: 16px;
   font-weight: 500;
 }
-.intro .body {
+.my-intro .body {
   padding: 100px 0;
 }
 @media (max-width: 1200px) {
-  .intro .body {
+  .my-intro .body {
     padding: 20px 0;
   }
 }
-.intro .body a, .intro .body .logout {
+.my-intro .body a, .my-intro .body .logout {
   font-size: 28px;
   color: #B8B8B8;
   font-weight: 400;
@@ -95,22 +95,22 @@ body {
   cursor: pointer;
 }
 @media (max-width: 1400px) {
-  .intro .body a, .intro .body .logout {
+  .my-intro .body a, .my-intro .body .logout {
     font-size: 20px;
   }
 }
 @media (max-width: 992px) {
-  .intro .body a, .intro .body .logout {
+  .my-intro .body a, .my-intro .body .logout {
     font-size: 20px;
   }
 }
-.intro .body a.active {
+.my-intro .body a.active {
   color: #000 !important;
 }
-.intro .body hr {
+.my-intro .body hr {
   color: #000;
 }
-.intro form input {
+.my-intro form input {
   min-width: 100%;
   display: block;
   outline: none;
