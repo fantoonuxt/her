@@ -45,221 +45,232 @@ body {
   height: 100%;
 }
 
-.intro {
+.intros {
   padding: 50px 0;
 }
 @media (max-width: 580px) {
-  .intro {
+  .intros {
     padding: 40px 0;
   }
 }
-.intro .content {
+.intros .content {
   width: 100%;
   max-width: 34.375rem;
 }
-.intro .content h3 {
+@media (max-width: 992px) {
+  .intros .content {
+    text-align: center;
+  }
+}
+.intros .content h3 {
   font-size: 3.125rem;
   font-weight: 500;
 }
-.intro .content p {
+.intros .content p {
   width: 544px;
   font-size: 20px;
   font-weight: 400;
   margin: 0;
 }
-.intro .progres {
+.intros .progres {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-left: auto;
 }
-.intro .step {
+.intros .step {
   width: 80px;
   height: 8px;
   background-color: #ccc;
   transition: background-color 0.3s;
 }
-.intro .step.active {
+.intros .step.active {
   background-color: #000;
 }
-.intro .question {
+.intros .question {
   margin-top: 30px;
   display: none;
 }
-.intro #question-1 {
+.intros #question-1 {
   display: block;
 }
-.intro .fair {
+.intros .fair {
   display: flex;
   margin-top: 20px;
   align-items: center;
 }
-.intro .fair p {
+.intros .fair p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .fair .colors {
+@media (max-width: 580px) {
+  .intros .fair p {
+    font-size: 25px;
+  }
+}
+.intros .fair .colors {
   display: flex;
   gap: 20px;
 }
-.intro .fair .colors div {
+.intros .fair .colors div {
   width: 120px;
   height: 120px;
   border-radius: 120px;
 }
-.intro .fair .colors div:nth-child(1) {
+.intros .fair .colors div:nth-child(1) {
   background: #F7E1CB;
 }
-.intro .fair .colors div:nth-child(2) {
+.intros .fair .colors div:nth-child(2) {
   background: #F5D6BA;
 }
-.intro .fair .colors div:nth-child(3) {
+.intros .fair .colors div:nth-child(3) {
   background: #F0CDAD;
 }
-.intro .fair .colors div:nth-child(4) {
+.intros .fair .colors div:nth-child(4) {
   background: #EFC9A9;
 }
-.intro .medium {
+.intros .medium {
   display: flex;
   margin-top: 20px;
   align-items: center;
 }
-.intro .medium p {
+.intros .medium p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .medium .colors {
+.intros .medium .colors {
   display: flex;
   gap: 20px;
 }
-.intro .medium .colors div {
+.intros .medium .colors div {
   width: 120px;
   height: 120px;
   border-radius: 120px;
 }
-.intro .medium .colors div:nth-child(1) {
+.intros .medium .colors div:nth-child(1) {
   background: #E8B682;
 }
-.intro .medium .colors div:nth-child(2) {
+.intros .medium .colors div:nth-child(2) {
   background: #E6B37F;
 }
-.intro .medium .colors div:nth-child(3) {
+.intros .medium .colors div:nth-child(3) {
   background: #E0B186;
 }
-.intro .medium .colors div:nth-child(4) {
+.intros .medium .colors div:nth-child(4) {
   background: #D5996C;
 }
-.intro .tan {
+.intros .tan {
   display: flex;
   margin-top: 20px;
   align-items: center;
 }
-.intro .tan p {
+.intros .tan p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .tan .colors {
+.intros .tan .colors {
   display: flex;
   gap: 20px;
 }
-.intro .tan .colors div {
+.intros .tan .colors div {
   width: 120px;
   height: 120px;
   border-radius: 120px;
 }
-.intro .tan .colors div:nth-child(1) {
+.intros .tan .colors div:nth-child(1) {
   background: #DAA167;
 }
-.intro .tan .colors div:nth-child(2) {
+.intros .tan .colors div:nth-child(2) {
   background: #D8975F;
 }
-.intro .tan .colors div:nth-child(3) {
+.intros .tan .colors div:nth-child(3) {
   background: #C58B5F;
 }
-.intro .tan .colors div:nth-child(4) {
+.intros .tan .colors div:nth-child(4) {
   background: #A96338;
 }
-.intro .deep {
+.intros .deep {
   display: flex;
   margin-top: 20px;
   align-items: center;
 }
-.intro .deep p {
+.intros .deep p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .deep .colors {
+.intros .deep .colors {
   display: flex;
   gap: 20px;
 }
-.intro .deep .colors div {
+.intros .deep .colors div {
   width: 120px;
   height: 120px;
   border-radius: 120px;
 }
-.intro .deep .colors div:nth-child(1) {
+.intros .deep .colors div:nth-child(1) {
   background: #8C4E28;
 }
-.intro .deep .colors div:nth-child(2) {
+.intros .deep .colors div:nth-child(2) {
   background: #944F25;
 }
-.intro .deep .colors div:nth-child(3) {
+.intros .deep .colors div:nth-child(3) {
   background: #6F371B;
 }
-.intro .deep .colors div:nth-child(4) {
+.intros .deep .colors div:nth-child(4) {
   background: #392011;
 }
-.intro .app-card .div {
+.intros .app-card .div {
   cursor: pointer;
   width: 170px;
   height: 170px;
   background: #B2B3BE;
 }
-.intro .app-card h5 {
+.intros .app-card h5 {
   font-size: 34px;
   font-weight: 500;
 }
-.intro .app-card p {
+.intros .app-card p {
   font-size: 20px;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.intro .app-card li {
+.intros .app-card li {
   font-size: 18px;
   font-weight: 400;
 }
-.intro .app-card .active {
+.intros .app-card .active {
   border: 2px solid #000;
 }
-.intro .app-card .active::after {
+.intros .app-card .active::after {
   content: "";
   border: 2px solid #fff;
   width: 165px;
   height: 165px;
   display: flex;
 }
-.intro .eye-color {
+.intros .eye-color {
   display: flex;
   margin-top: 20px;
   align-items: center;
 }
-.intro .eye-color p {
+.intros .eye-color p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .eye-color .colors {
+.intros .eye-color .colors {
   display: flex;
   gap: 20px;
 }
-.intro .eye-color .colors div {
+.intros .eye-color .colors div {
   text-align: center;
 }
-.intro .eye-color .colors div div {
+.intros .eye-color .colors div div {
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -269,19 +280,19 @@ body {
   border-radius: 120px;
   background-color: #E3E3E3;
 }
-.intro .eye-color .colors div div img {
+.intros .eye-color .colors div div img {
   width: 90px;
   height: 90px;
 }
-.intro .eye-color .colors div span {
+.intros .eye-color .colors div span {
   font-size: 20px;
   font-weight: 400;
   margin-top: 15px;
 }
-.intro .eye-color .active {
+.intros .eye-color .active {
   border: 2px solid #000;
 }
-.intro .eye-color .active::after {
+.intros .eye-color .active::after {
   content: "";
   border: 2px solid #fff;
   width: 115px;
@@ -289,24 +300,24 @@ body {
   border-radius: 61px;
   position: absolute;
 }
-.intro .hair-color {
+.intros .hair-color {
   display: flex;
   margin-top: 20px;
 }
-.intro .hair-color p {
+.intros .hair-color p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .hair-color .colors {
+.intros .hair-color .colors {
   display: grid;
   gap: 20px;
   grid-template-columns: auto auto auto auto auto;
 }
-.intro .hair-color .colors div {
+.intros .hair-color .colors div {
   text-align: center;
 }
-.intro .hair-color .colors div div {
+.intros .hair-color .colors div div {
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -316,19 +327,19 @@ body {
   border-radius: 120px;
   background-color: #E3E3E3;
 }
-.intro .hair-color .colors div div img {
+.intros .hair-color .colors div div img {
   width: 90px;
   height: 90px;
 }
-.intro .hair-color .colors div span {
+.intros .hair-color .colors div span {
   font-size: 20px;
   font-weight: 400;
   margin-top: 15px;
 }
-.intro .hair-color .active {
+.intros .hair-color .active {
   border: 2px solid #000;
 }
-.intro .hair-color .active::after {
+.intros .hair-color .active::after {
   content: "";
   border: 2px solid #fff;
   width: 115px;
@@ -336,48 +347,48 @@ body {
   border-radius: 61px;
   position: absolute;
 }
-.intro .shades {
+.intros .shades {
   display: flex;
   margin-top: 20px;
 }
-.intro .shades p {
+.intros .shades p {
   font-size: 35px;
   font-weight: 500;
   width: 200px;
 }
-.intro .shades .colors {
+.intros .shades .colors {
   display: flex;
   gap: 20px;
 }
-.intro .shades .colors div div {
+.intros .shades .colors div div {
   cursor: pointer;
   width: 200px;
   height: 80px;
 }
-.intro .shades .colors div span {
+.intros .shades .colors div span {
   font-size: 20px;
   font-weight: 400;
   margin-top: 15px;
 }
-.intro .shades .colors div:nth-child(1) div {
+.intros .shades .colors div:nth-child(1) div {
   background: #C03856;
 }
-.intro .shades .colors div:nth-child(2) div {
+.intros .shades .colors div:nth-child(2) div {
   background: #D95E62;
 }
-.intro .shades .colors div:nth-child(3) div {
+.intros .shades .colors div:nth-child(3) div {
   background: #BD8B76;
 }
-.intro .shades .colors div:nth-child(4) div {
+.intros .shades .colors div:nth-child(4) div {
   background: #9B2323;
 }
-.intro .shades .colors div:nth-child(5) div {
+.intros .shades .colors div:nth-child(5) div {
   background: #9B2323;
 }
-.intro .shades .active {
+.intros .shades .active {
   border: 2px solid #000;
 }
-.intro .shades .active::after {
+.intros .shades .active::after {
   content: "";
   border: 2px solid #fff;
   width: 196px;
@@ -385,44 +396,44 @@ body {
   position: absolute;
   border-radius: 0;
 }
-.intro #results h3 {
+.intros #results h3 {
   font-size: 3.125rem;
   font-weight: 500;
   line-height: 120%;
 }
-.intro #results p {
+.intros #results p {
   font-size: 20px;
   font-weight: 400;
   width: 100%;
   max-width: 400px;
 }
-.intro .app-cards {
+.intros .app-cards {
   background-color: #000;
   color: #fff;
   padding: 20px;
 }
-.intro .app-cards .app-cards-img {
+.intros .app-cards .app-cards-img {
   display: grid;
   place-items: center;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-.intro .app-cards .app-cards-img img {
+.intros .app-cards .app-cards-img img {
   width: 100%;
   height: auto;
   grid-area: 1/1;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
-.intro .app-cards .app-cards-img img:last-child {
+.intros .app-cards .app-cards-img img:last-child {
   opacity: 0;
   visibility: hidden;
 }
-.intro .app-cards:hover .app-cards-img img:first-child {
+.intros .app-cards:hover .app-cards-img img:first-child {
   opacity: 0;
   visibility: hidden;
 }
-.intro .app-cards:hover .app-cards-img img:last-child {
+.intros .app-cards:hover .app-cards-img img:last-child {
   opacity: 1;
   visibility: visible;
 }
