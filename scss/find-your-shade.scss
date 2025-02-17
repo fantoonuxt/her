@@ -23,16 +23,16 @@ body {
     @media (max-width: 992px) { @content; }
   }
   @if $size == md {
-    @media (max-width: 787px) { @content; }
+    @media (max-width: 767px) { @content; }
   }
   @if $size == sm {
     @media (max-width: 580px) { @content; }
   }
-  @if $size == xxs {
-    @media (max-width: 471px) { @content; }
-  }
   @if $size == xs {
-    @media (max-width: 370px) { @content; }
+    @media (max-width: 490px) { @content; }
+  }
+  @if $size == xxs {
+    @media (max-width: 395px) { @content; }
   }
 }
 
@@ -142,29 +142,54 @@ body {
       font-size: 35px;
       font-weight: 500;
       width: 200px;
-      @include media-breakpoint-down(sm) {
-        font-size: 25px;
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        width: 150px;
+      }
+      @include media-breakpoint-down(xxs) {
+        font-size: 20px;
       }
     }
     .colors {
       display: flex;
       gap: 20px;
+      @include media-breakpoint-down(md) {
+        gap: 10px;
+      }
+      @include media-breakpoint-down(xs) {
+        gap: 5px;
+      }
       div{
         width: 120px;
         height: 120px;
-        border-radius: 120px;
+        border-radius: 100%;
+        @include media-breakpoint-down(md) {
+          width: 85px;
+          height: 85px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 65px;
+          height: 65px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxs) {
+          width: 55px;
+          height: 55px;
+          border-radius: 100%;
+        }
       }
       div:nth-child(1){
-        background: #F7E1CB;
+        background: #DAA167;
       }
       div:nth-child(2){
-        background: #F5D6BA;
+        background: #D8975F;
       }
       div:nth-child(3){
-        background: #F0CDAD;
+        background: #C58B5F;
       }
       div:nth-child(4){
-        background: #EFC9A9;
+        background: #A96338;
       }
     }
   }
@@ -176,27 +201,54 @@ body {
       font-size: 35px;
       font-weight: 500;
       width: 200px;
-
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        width: 150px;
+      }
+      @include media-breakpoint-down(xxs) {
+        font-size: 20px;
+      }
     }
     .colors {
       display: flex;
       gap: 20px;
+      @include media-breakpoint-down(md) {
+        gap: 10px;
+      }
+      @include media-breakpoint-down(xs) {
+        gap: 5px;
+      }
       div{
         width: 120px;
         height: 120px;
-        border-radius: 120px;
+        border-radius: 100%;
+        @include media-breakpoint-down(md) {
+          width: 85px;
+          height: 85px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 65px;
+          height: 65px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxs) {
+          width: 55px;
+          height: 55px;
+          border-radius: 100%;
+        }
       }
       div:nth-child(1){
-        background: #E8B682;
+        background: #DAA167;
       }
       div:nth-child(2){
-        background: #E6B37F;
+        background: #D8975F;
       }
       div:nth-child(3){
-        background: #E0B186;
+        background: #C58B5F;
       }
       div:nth-child(4){
-        background: #D5996C;
+        background: #A96338;
       }
     }
   }
@@ -208,15 +260,42 @@ body {
       font-size: 35px;
       font-weight: 500;
       width: 200px;
-
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        width: 150px;
+      }
+      @include media-breakpoint-down(xxs) {
+        font-size: 20px;
+      }
     }
     .colors {
       display: flex;
       gap: 20px;
+      @include media-breakpoint-down(md) {
+        gap: 10px;
+      }
+      @include media-breakpoint-down(xs) {
+        gap: 5px;
+      }
       div{
         width: 120px;
         height: 120px;
-        border-radius: 120px;
+        border-radius: 100%;
+        @include media-breakpoint-down(md) {
+          width: 85px;
+          height: 85px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 65px;
+          height: 65px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxs) {
+          width: 55px;
+          height: 55px;
+          border-radius: 100%;
+        }
       }
       div:nth-child(1){
         background: #DAA167;
@@ -234,57 +313,106 @@ body {
   }
   .deep{
     display: flex;
-     margin-top: 20px;
+    margin-top: 20px;
     align-items: center;
     p{
       font-size: 35px;
       font-weight: 500;
       width: 200px;
-
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        width: 150px;
+      }
+      @include media-breakpoint-down(xxs) {
+        font-size: 20px;
+      }
     }
     .colors {
       display: flex;
       gap: 20px;
+      @include media-breakpoint-down(md) {
+        gap: 10px;
+      }
+      @include media-breakpoint-down(xs) {
+        gap: 5px;
+      }
       div{
         width: 120px;
         height: 120px;
-        border-radius: 120px;
+        border-radius: 100%;
+        @include media-breakpoint-down(md) {
+          width: 85px;
+          height: 85px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 65px;
+          height: 65px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxs) {
+          width: 55px;
+          height: 55px;
+          border-radius: 100%;
+        }
       }
       div:nth-child(1){
-        background: #8C4E28;
+        background: #DAA167;
       }
       div:nth-child(2){
-        background: #944F25;
+        background: #D8975F;
       }
       div:nth-child(3){
-        background: #6F371B;
+        background: #C58B5F;
       }
       div:nth-child(4){
-        background: #392011;
+        background: #A96338;
       }
     }
   }
   .app-card{
+    @include media-breakpoint-down(sm) {
+      display: block !important;
+    }
     .div{
       cursor: pointer;
       width: 170px;
       height: 170px;
       background: #B2B3BE;
     }
- 
+
     h5{
     font-size: 34px;
     font-weight: 500;
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 24px;
+      margin: 10px 0 0;
+
+    }
     }
     p{
       font-size: 20px;
       font-weight: 500;
       margin-top: 10px;
       margin-bottom: 5px;
+      @include media-breakpoint-down(sm) {
+        font-weight: 400;
+            margin: 0;
+  
+      }
     }
     li{
       font-size: 18px;
       font-weight: 400;
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+  
+      }
     }
     .active {
       border: 2px solid #000;
@@ -308,13 +436,25 @@ body {
     display: flex;
     margin-top: 20px;
     align-items: center;
-   p{
-     font-size: 35px;
-     font-weight: 500;
-     width: 200px;
+    @include media-breakpoint-down(md) {
+      display: block;
 
-   }
-   .colors{
+       }
+    p{
+      font-size: 35px;
+      font-weight: 500;
+      width: 200px;
+
+        @include media-breakpoint-down(md) {
+          font-size: 30px;
+          width: 150px;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 20px;
+        }
+  
+    }
+    .colors{
     display: flex;
       gap: 20px;
     div{
@@ -322,6 +462,10 @@ body {
       div{
         display: flex;
         cursor: pointer;
+        @include media-breakpoint-down(sm) {
+          width: 55px;
+          height: 55px;
+        }
 
         justify-content: center;
         align-items: center;
@@ -332,12 +476,21 @@ body {
         img{
           width: 90px;
           height: 90px;
+          @include media-breakpoint-down(sm) {
+            width: 38px;
+            height: 38px;
+          }
         }
       }
       span{
         font-size: 20px;
         font-weight: 400;
         margin-top: 15px;
+        @include media-breakpoint-down(sm) {
+          font-size: 13px;
+      
+    
+        }
       }
     }
    }
@@ -349,6 +502,10 @@ body {
     border: 2px solid #fff;
     width: 115px;
     height: 115px;
+    @include media-breakpoint-down(sm) {
+      width: 44px;
+      height: 44px;
+    }
     // display: flex;
     border-radius: 61px;
     position: absolute;
@@ -363,17 +520,37 @@ body {
   .hair-color{
     display: flex;
     margin-top: 20px;
+    @include media-breakpoint-down(md) {
+      display: block;
+
+       }
     // align-items: center;
    p{
      font-size: 35px;
      font-weight: 500;
      width: 200px;
+     @include media-breakpoint-down(md) {
+      font-size: 30px;
+      width: 150px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+      width: 94px;
 
+    }
    }
    .colors{
     display: grid;
       gap: 20px;
+      @include media-breakpoint-down(sm) {
+        gap: 10px;
+
+      }
       grid-template-columns: auto auto auto auto auto;
+      @include media-breakpoint-down(md) {
+        grid-template-columns: auto auto auto auto;
+
+      }
     div{
       text-align: center;
       div{
@@ -383,17 +560,30 @@ body {
         align-items: center;
         width: 120px;
         height: 120px;
+        @include media-breakpoint-down(sm) {
+          width: 55px;
+          height: 55px;
+        }
         border-radius: 120px;
         background-color: #E3E3E3;
         img{
           width: 90px;
           height: 90px;
+          @include media-breakpoint-down(sm) {
+            width: 38px;
+            height: 38px;
+          }
         }
       }
       span{
         font-size: 20px;
         font-weight: 400;
         margin-top: 15px;
+        @include media-breakpoint-down(sm) {
+          font-size: 13px;
+      
+    
+        }
       }
     }
    }
@@ -405,6 +595,10 @@ body {
     border: 2px solid #fff;
     width: 115px;
     height: 115px;
+    @include media-breakpoint-down(sm) {
+      width: 44px;
+      height: 44px;
+    }
     // display: flex;
     border-radius: 61px;
     position: absolute;
@@ -419,6 +613,10 @@ body {
   .shades{
     display: flex;
     margin-top: 20px;
+    @include media-breakpoint-down(md) {
+      display: block;
+
+    }
     p{
       font-size: 35px;
       font-weight: 500;
@@ -428,17 +626,29 @@ body {
     .colors{
      display: flex;
        gap: 20px;
+       @include media-breakpoint-down(md) {
+     display: grid;
+
+        grid-template-columns: auto auto;
+  
+      }
        div{
         div{
           cursor: pointer;
           width: 200px;
           height: 80px;
+          @include media-breakpoint-down(sm) {
+            width: 163px;
+            height: 69px;
+         
+             }
         }
-
+     
         span{
           font-size: 20px;
           font-weight: 400;
           margin-top: 15px;
+          
         }
         }
         div:nth-child(1) div{
@@ -468,6 +678,11 @@ body {
      height: 76px;
      position: absolute;
       border-radius: 0;
+      @include media-breakpoint-down(sm) {
+     
+        width: 159px;
+        height: 65px;
+         }
      // @include media-breakpoint-down(sm) {
      //   width: 23px;
      //   height: 23px;
@@ -554,17 +769,28 @@ body {
   height: 116px;
   display: flex;
   border-radius: 61px;
-
-  // @include media-breakpoint-down(sm) {
-  //   width: 23px;
-  //   height: 23px;
-    
-  // }
+  
+  @include media-breakpoint-down(md) {
+    width: 81px;
+    height: 81px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: 61px;
+    height: 61px;
+  }
+  @include media-breakpoint-down(xxs) {
+    width: 51px;
+    height: 51px;
+  }
 }
 
 
 
-
+.findYourShade p {
+  @include media-breakpoint-down(xs) {
+   max-width: 347px !important;
+  }
+}
 .next {
   background-color: transparent;
   color: #000;
@@ -583,5 +809,73 @@ body {
   color: #fff;
   svg{
     fill: #fff;
+  }
+}
+
+
+.footer {
+  background: linear-gradient(320deg, #000 47.2%, #666 168.62%);
+  color: white;
+  text-align: left;
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 70px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 40px 0;
+  }
+  p, li {
+      font-size: 18px;
+  }
+
+  a {
+      color: white;
+      // text-decoration: none;
+      // &:hover {
+      //     text-decoration: underline;
+      // }
+  }
+.fs-base{
+  font-size: 16px;
+  margin-top: 30px;
+}
+  .input-group {
+      max-width: 400px;
+      border: 2px solid  #FFF;
+     input{
+      background-color: transparent;
+      color: #fff;
+
+      outline: none !important;
+      border: none !important;
+     }
+     input::placeholder{
+      color: #fff;
+     }
+     button{
+      padding: 8px 10px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+     }
+  }
+.baianat{
+  text-decoration: underline !important;
+}
+  .footer-logo {
+    padding-top: 100px;
+    @include media-breakpoint-down(md) {
+      padding-top: 70px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+    }
+  }
+.list-unstyled a{
+  text-decoration: none !important;
+}
+  .d-flex a {
+      font-size: 22px;
+      color: white;
   }
 }
