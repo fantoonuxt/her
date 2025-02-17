@@ -226,7 +226,13 @@ body {
      }
 }
 .body{
-    margin-top: 20px;
+  margin-top: 20px;
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 100px;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 50px;
+  }
 }
 .section {
   .header {

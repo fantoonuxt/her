@@ -222,6 +222,9 @@ canvas {
   @include media-breakpoint-down(sm) {
     padding: 40px 0;
   }
+  @include media-breakpoint-down(xs) {
+    padding: 20px 0;
+  }
   &-img{
     width: rem(300px);
     height:  rem(70px);
@@ -414,6 +417,7 @@ h3{
     transition: opacity 0.5s ease, visibility 0.5s ease;
     .mySwiper {
       display: none;
+
       img {
         width: 100%;
         height: 100%;
@@ -427,11 +431,12 @@ h3{
       display:flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
       @include media-breakpoint-down(lg) {
         display: none;
       }
       .img {
-        flex: 1 1 20%;
+        flex: 1 1 19%;
         img {
           width: 100%;
           height: 100%;

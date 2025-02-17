@@ -195,6 +195,16 @@ body {
 .intro-product .body {
   margin-top: 20px;
 }
+@media (max-width: 1200px) {
+  .intro-product .body {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .intro-product .body {
+    margin-bottom: 50px;
+  }
+}
 .intro-product .section .header {
   font-weight: bold;
   display: flex;

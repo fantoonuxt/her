@@ -266,21 +266,20 @@ body {
     transition: opacity 0.5s ease;
     cursor: pointer;
     min-height: 390px;
-    
     @include media-breakpoint-up(xs) {
-      max-height: 400px;
+      min-height: 600px;
     }
     @include media-breakpoint-up(sm) {
-      min-height: 500px;
+      min-height: 800px;
     }
     @include media-breakpoint-up(md) {
-      min-height: 600px;
+      min-height: 650px;
     }
     @include media-breakpoint-up(lg) {
       min-height: 700px;
     }
     @include media-breakpoint-up(xl) {
-      min-height: 780px;
+      min-height: 900px;
     }
     
 h3{
@@ -302,7 +301,7 @@ h3{
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100%; // يأخذ طول المحتوى
+    min-height: 100%;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
