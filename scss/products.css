@@ -262,17 +262,17 @@ body {
 }
 @media (min-width: 370px) {
   .all .findYourShade {
-    max-height: 400px;
+    min-height: 600px;
   }
 }
 @media (min-width: 580px) {
   .all .findYourShade {
-    min-height: 500px;
+    min-height: 800px;
   }
 }
 @media (min-width: 767px) {
   .all .findYourShade {
-    min-height: 600px;
+    min-height: 650px;
   }
 }
 @media (min-width: 992px) {
@@ -282,7 +282,7 @@ body {
 }
 @media (min-width: 1200px) {
   .all .findYourShade {
-    min-height: 780px;
+    min-height: 900px;
   }
 }
 .all .findYourShade h3 {
