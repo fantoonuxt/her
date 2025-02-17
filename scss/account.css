@@ -56,12 +56,17 @@ body {
 }
 @media (max-width: 787px) {
   .intro {
-    padding: 70px 0;
+    padding: 0px 0;
   }
 }
 @media (max-width: 580px) {
   .intro {
     padding: 40px 0;
+  }
+}
+@media (max-width: 1200px) {
+  .intro {
+    padding: 20px 0;
   }
 }
 .intro .heeder {
@@ -77,14 +82,9 @@ body {
 .intro .body {
   padding: 100px 0;
 }
-@media (max-width: 787px) {
+@media (max-width: 1200px) {
   .intro .body {
-    padding: 70px 0;
-  }
-}
-@media (max-width: 580px) {
-  .intro .body {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 }
 .intro .body a, .intro .body .logout {
@@ -93,6 +93,16 @@ body {
   font-weight: 400;
   text-decoration: none;
   cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .intro .body a, .intro .body .logout {
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .intro .body a, .intro .body .logout {
+    font-size: 20px;
+  }
 }
 .intro .body a.active {
   color: #000 !important;
@@ -121,10 +131,75 @@ body {
   font-size: 32px;
   font-weight: 600;
 }
+@media (max-width: 992px) {
+  .widh .add-order {
+    font-size: 24px;
+  }
+}
+@media (max-width: 787px) {
+  .widh .add-order {
+    font-size: 20px;
+  }
+}
+@media (max-width: 580px) {
+  .widh .add-order {
+    font-size: 18px;
+  }
+}
 .widh p {
   width: 422px;
   font-size: 20px;
   font-weight: 500;
+}
+@media (max-width: 992px) {
+  .widh p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 787px) {
+  .widh p {
+    font-weight: 400;
+  }
+}
+
+.conditions {
+  padding-top: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.conditions a {
+  display: block;
+  color: #B8B8B8;
+  text-decoration: none;
+}
+@media (max-width: 787px) {
+  .conditions a {
+    font-size: 24px;
+  }
+}
+@media (max-width: 580px) {
+  .conditions a {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 787px) {
+  .conditions a:nth-child(1) {
+    min-width: 200px;
+  }
+}
+@media (max-width: 580px) {
+  .conditions a:nth-child(1) {
+    min-width: 150px;
+  }
+}
+@media (max-width: 787px) {
+  .conditions a:nth-child(5) {
+    min-width: 100px;
+  }
+}
+.conditions .active {
+  text-decoration: underline !important;
 }
 
 .app-cards {
@@ -174,6 +249,26 @@ body {
 .second-section h3 {
   font-size: 3.125rem;
   font-weight: 500;
+}
+@media (max-width: 992px) {
+  .second-section h3 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 787px) {
+  .second-section h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 580px) {
+  .second-section h3 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 370px) {
+  .second-section h3 {
+    font-size: 20px;
+  }
 }
 
 .footer {

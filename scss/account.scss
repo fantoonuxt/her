@@ -96,10 +96,16 @@ body {
 .intro{
   padding: 100px 0;
   @include media-breakpoint-down(md) {
-    padding: 70px 0;
+    padding: 0px 0;
   }
   @include media-breakpoint-down(sm) {
     padding: 40px 0;
+  }
+  // @include media-breakpoint-down(lg) {
+  //   padding:20px 0;
+  // }
+  @include media-breakpoint-down(xl) {
+    padding:20px 0;
   }
   .heeder{
     display: flex;
@@ -113,11 +119,8 @@ body {
   }
   .body{
     padding: 100px 0;
-    @include media-breakpoint-down(md) {
-      padding: 70px 0;
-    }
-    @include media-breakpoint-down(sm) {
-      padding: 40px 0;
+    @include media-breakpoint-down(xl) {
+      padding:20px 0;
     }
     a, .logout{
       font-size: 28px;
@@ -125,6 +128,14 @@ body {
       font-weight: 400;
       text-decoration: none;
       cursor: pointer;
+      @media(max-width: 1400px) {
+        font-size: 20px;
+        
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 20px;
+
+      }
     }
     a.active{
       color: #000 !important;
@@ -154,13 +165,64 @@ body {
     width: 322px;
     font-size: 32px;
   font-weight: 600;
+  @include media-breakpoint-down(lg) {
+    font-size: 24px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
   }
   p{
     width: 422px;
     font-size: 20px;
     font-weight: 500;
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+    }
+    @include media-breakpoint-down(md) {
+      font-weight: 400;
+
+    }
   }
 }
+.conditions{
+  padding-top: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 10px;
+  a {
+    display: block;
+    color: #B8B8B8;
+    text-decoration: none;
+    
+    @include media-breakpoint-down(md) {
+      font-size: 24px;
+  }
+  @include media-breakpoint-down(sm) {
+    
+    font-size: 20px !important;
+}
+  }
+  a:nth-child(1){
+    @include media-breakpoint-down(md) {
+      min-width: 200px;
+  }
+  @include media-breakpoint-down(sm) {
+    min-width: 150px;
+}
+  }
+  a:nth-child(5){
+    @include media-breakpoint-down(md) {
+      min-width: 100px;
+  }
+  }
+  .active{
+    text-decoration: underline !important;
+  }
+} 
 .app-cards {
   background-color: #000;
   color: #fff;
@@ -213,6 +275,18 @@ body {
   h3{
     font-size: rem(50px);
     font-weight: 500;
+    @include media-breakpoint-down(lg) {
+      font-size: 35px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 25px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 20px;
+    }
   }
 }
 .footer {

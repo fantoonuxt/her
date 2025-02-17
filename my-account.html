@@ -62,8 +62,8 @@
       </div>
       <div class="body">
         <div class="row">
-          <div class="col-md-3">
-            <div>
+          <div class="col-lg-3 col-md-5">
+            <div class="d-none d-md-block">
               <div class="d-flex align-items-center gap-5">
                 <a href="/my-account.html" title="Account details" class="active">Account details</a>
                 <svg width="40" height="25" viewBox="0 0 40 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,9 +79,16 @@
               <hr>
               <button  title="Log out" class="logout popup-button button-outline-dark" data-content="1">Log out</button>
             </div>
+            <div class="d-flex d-md-none gap-5 conditions mb-3 overflow-scroll">
+              <a href="/my-account.html" title="Account details" class="active">Account details</a>
+              <a href="/order.html" title="Orders">Orders</a>
+              <a href="/addresses.html" title="Addresses">Addresses</a>
+              <a href="/payment.html" title="Payment">Payment</a>
+              <a  title="Log out" class="logout popup-button" data-content="1">Log out</a>
+            </div>
           </div>
-          <div class="col-md-1 d-none d-md-block"></div>
-          <div class="col-md-5">
+          <div class="col-md-1 d-none d-lg-block"></div>
+          <div class="col-md-5 col-md-7">
             <form >         
               <label>Name</label>
               <br>
@@ -91,7 +98,7 @@
               <input type="text" placeholder="Your phone" value="010000000000" class="mt-1" required/>
               <label>Full Address</label>
               <input type="text" placeholder="e.g.Apartment 4, Building name, Street 3" value="e.g.Apartment 4, Building name, Street 3" class="mt-1" required/>
-              <div class="d-flex justify-content-between mt-5">
+              <div class="d-flex justify-content-between mt-5 align-items-center">
                  <button  class="button-border-dark popup-button" data-content="2" type="button">Update info</button>
                  <button class="button-outline-dark popup-button" data-content="3" type="button">
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
