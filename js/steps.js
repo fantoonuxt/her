@@ -54,10 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const fair = document.querySelectorAll('.fair .colors div');
-const medium = document.querySelectorAll('.medium .colors div');
-const tan = document.querySelectorAll('.tan .colors div');
-const deep = document.querySelectorAll('.deep .colors div');
+const fair = document.querySelectorAll('.allColors div');
 const cards = document.querySelectorAll('.app-card .div');
 const eye = document.querySelectorAll('.eye-color .colors div div');
 const hair = document.querySelectorAll('.hair-color .colors div div');
@@ -67,24 +64,6 @@ fair.forEach(circle => {
       fair.forEach(c => c.classList.remove('active'));
         circle.classList.add('active');
     });
-});
-medium.forEach(circle => {
-  circle.addEventListener('click', () => {
-    medium.forEach(c => c.classList.remove('active'));
-      circle.classList.add('active');
-  });
-});
-tan.forEach(circle => {
-  circle.addEventListener('click', () => {
-    tan.forEach(c => c.classList.remove('active'));
-      circle.classList.add('active');
-  });
-});
-deep.forEach(circle => {
-  circle.addEventListener('click', () => {
-    deep.forEach(c => c.classList.remove('active'));
-      circle.classList.add('active');
-  });
 });
 cards.forEach(circle => {
   circle.addEventListener('click', () => {
