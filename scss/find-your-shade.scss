@@ -16,8 +16,11 @@ body {
 }
 
 @mixin media-breakpoint-down($size) {
+  @if $size == xxl {
+    @media (max-width: 1440px) { @content; }
+  }
   @if $size == xl {
-    @media (max-width: 1200px) { @content; }
+    @media (max-width: 1275px) { @content; }
   }
   @if $size == lg {
     @media (max-width: 992px) { @content; }
@@ -32,30 +35,14 @@ body {
     @media (max-width: 490px) { @content; }
   }
   @if $size == xxs {
-    @media (max-width: 395px) { @content; }
+    @media (max-width: 411px) { @content; }
+  }
+  @if $size == xxxs {
+    @media (max-width: 342px) { @content; }
   }
 }
 
-@mixin media-breakpoint-up($size) {
-  @if $size == xl {
-    @media (min-width: 1200px) { @content; }
-  }
-  @if $size == lg {
-    @media (min-width: 992px) { @content; }
-  }
-  @if $size == md {
-    @media (min-width: 767px) { @content; }
-  }
-  @if $size == sm {
-    @media (min-width: 580px) { @content; }
-  }
-  @if $size == xxs {
-    @media (min-width: 471px) { @content; }
-  }
-  @if $size == xs {
-    @media (min-width: 370px) { @content; }
-  }
-}
+
 
 .app-Header{
   height: rem(150px);
@@ -109,6 +96,13 @@ body {
       font-size: 20px;
       font-weight: 400;
       margin: 0;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        margin: auto;
+      }
     }
   }
   .progres {
@@ -120,6 +114,9 @@ body {
   .step {
     width: 80px;
     height: 8px;
+    @include media-breakpoint-down(xxs) {
+      width: 65px;
+    }
     background-color: #ccc;
     transition: background-color 0.3s;
   }
@@ -133,6 +130,32 @@ body {
   
   #question-1 {
     display: block;
+    @include media-breakpoint-down(xxs) {
+      h2 {
+        font-size: 18px;
+      }
+    }
+  }
+  #question-2 {
+    @include media-breakpoint-down(xxs) {
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+  #question-3 {
+    @include media-breakpoint-down(xxs) {
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+  #question-4 {
+    @include media-breakpoint-down(xxs) {
+      h2 {
+        font-size: 20px;
+      }
+    }
   }
   .fair{
     display: flex;
@@ -178,6 +201,11 @@ body {
           height: 55px;
           border-radius: 100%;
         }
+        @include media-breakpoint-down(xxxs) {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+        }
       }
       div:nth-child(1){
         background: #DAA167;
@@ -218,6 +246,9 @@ body {
       @include media-breakpoint-down(xs) {
         gap: 5px;
       }
+      // @include media-breakpoint-down(xxxs) {
+      //   gap: 2px;
+      // }
       div{
         width: 120px;
         height: 120px;
@@ -235,6 +266,11 @@ body {
         @include media-breakpoint-down(xxs) {
           width: 55px;
           height: 55px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxxs) {
+          width: 50px;
+          height: 50px;
           border-radius: 100%;
         }
       }
@@ -296,6 +332,11 @@ body {
           height: 55px;
           border-radius: 100%;
         }
+        @include media-breakpoint-down(xxxs) {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+        }
       }
       div:nth-child(1){
         background: #DAA167;
@@ -353,6 +394,11 @@ body {
         @include media-breakpoint-down(xxs) {
           width: 55px;
           height: 55px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxxs) {
+          width: 50px;
+          height: 50px;
           border-radius: 100%;
         }
       }
@@ -438,35 +484,65 @@ body {
     align-items: center;
     @include media-breakpoint-down(md) {
       display: block;
-
-       }
+    }
     p{
       font-size: 35px;
       font-weight: 500;
       width: 200px;
-
-        @include media-breakpoint-down(md) {
-          font-size: 30px;
-          width: 150px;
-        }
-        @include media-breakpoint-down(sm) {
-          font-size: 20px;
-        }
-  
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        width: 150px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 28px;
+      }
     }
     .colors{
-    display: flex;
-      gap: 20px;
+      display: flex;
+      gap: 5%;
+      @include media-breakpoint-down(lg) {
+        gap: 3%;
+      }
+      @include media-breakpoint-down(md) {
+        gap: 8%;
+      }
+      @include media-breakpoint-down(sm) {
+        justify-content: space-between;
+      }
+      @include media-breakpoint-down(xs) {
+        padding: 0 5px;
+      }
     div{
       text-align: center;
+      // margin-left: 5px;
       div{
         display: flex;
         cursor: pointer;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
+          width: 110px;
+          height: 110px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(md) {
+          width: 90px;
+          height: 90px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xs) {
+          width: 70px;
+          height: 70px;
+          border-radius: 100%;
+        }
+        @include media-breakpoint-down(xxs) {
           width: 55px;
           height: 55px;
+          border-radius: 100%;
         }
-
+        // @include media-breakpoint-down(xxxs) {
+        //   width: 50px;
+        //   height: 50px;
+        //   border-radius: 100%;
+        // }
         justify-content: center;
         align-items: center;
         width: 120px;
@@ -474,12 +550,33 @@ body {
         border-radius: 120px;
         background-color: #E3E3E3;
         img{
-          width: 90px;
-          height: 90px;
-          @include media-breakpoint-down(sm) {
-            width: 38px;
-            height: 38px;
+          width: 86px;
+          height: 86px;
+          @include media-breakpoint-down(lg) {
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
           }
+          @include media-breakpoint-down(md) {
+            width: 65px;
+            height: 65px;
+            border-radius: 100%;
+          }
+          @include media-breakpoint-down(xs) {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+          }
+          @include media-breakpoint-down(xxs) {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+          }
+          // @include media-breakpoint-down(xxxs) {
+          //   width: 25px;
+          //   height: 25px;
+          //   border-radius: 100%;
+          // }
         }
       }
       span{
@@ -488,23 +585,37 @@ body {
         margin-top: 15px;
         @include media-breakpoint-down(sm) {
           font-size: 13px;
-      
-    
         }
       }
     }
-   }
+  }
     .active {
     border: 2px solid #000;
   }
-   .active::after{
+  .active::after{
     content: "";
     border: 2px solid #fff;
     width: 115px;
     height: 115px;
-    @include media-breakpoint-down(sm) {
-      width: 44px;
-      height: 44px;
+    @include media-breakpoint-down(lg) {
+      width: 106px;
+      height: 106px;
+      border-radius: 100%;
+    }
+    @include media-breakpoint-down(md) {
+      width: 86px;
+      height: 86px;
+      border-radius: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 66px;
+      height: 66px;
+      border-radius: 100%;
+    }
+    @include media-breakpoint-down(xxs) {
+      width: 51px;
+      height: 51px;
+      border-radius: 100%;
     }
     // display: flex;
     border-radius: 61px;
@@ -519,85 +630,134 @@ body {
   }
   .hair-color{
     display: flex;
-    margin-top: 20px;
+    margin-top: 60px;
     @include media-breakpoint-down(md) {
       display: block;
-
-       }
+    }
     // align-items: center;
-   p{
-     font-size: 35px;
-     font-weight: 500;
-     width: 200px;
-     @include media-breakpoint-down(md) {
-      font-size: 30px;
-      width: 150px;
-    }
-    @include media-breakpoint-down(sm) {
-      font-size: 20px;
-      width: 94px;
-
-    }
-   }
-   .colors{
-    display: grid;
-      gap: 20px;
-      @include media-breakpoint-down(sm) {
-        gap: 10px;
-
-      }
-      grid-template-columns: auto auto auto auto auto;
+    p{
+      font-size: 35px;
+      font-weight: 500;
+      width: 200px;
       @include media-breakpoint-down(md) {
-        grid-template-columns: auto auto auto auto;
-
+        font-size: 30px;
+        width: 150px;
       }
-    div{
-      text-align: center;
+      @include media-breakpoint-down(sm) {
+        font-size: 28px;
+      }
+  
+    }
+  .colors{
+    display: grid;
+      // gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: space-between;
       div{
-        display: flex;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-        width: 120px;
-        height: 120px;
-        @include media-breakpoint-down(sm) {
-          width: 55px;
-          height: 55px;
+        text-align: center;
+        justify-self: center;
+        
+        div{
+          display: flex;
+          cursor: pointer;
+          @include media-breakpoint-down(lg) {
+            width: 110px;
+            height: 110px;
+            border-radius: 100%;
+          }
+          @include media-breakpoint-down(md) {
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+          }
+          @include media-breakpoint-down(xs) {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+          }
+          @include media-breakpoint-down(xxs) {
+            width: 55px;
+            height: 55px;
+            border-radius: 100%;
+          }
+          // @include media-breakpoint-down(xxxs) {
+          //   width: 50px;
+          //   height: 50px;
+          //   border-radius: 100%;
+          // }
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          height: 120px;
+          border-radius: 120px;
+          background-color: #E3E3E3;
+          img {
+            width: 86px;
+            height: 86px;
+            @include media-breakpoint-down(lg) {
+              width: 75px;
+              height: 75px;
+              border-radius: 100%;
+            }
+              @include media-breakpoint-down(md) {
+                width: 65px;
+                height: 65px;
+                border-radius: 100%;
+              }
+              @include media-breakpoint-down(xs) {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+              }
+              @include media-breakpoint-down(xxs) {
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+              }
+            // @include media-breakpoint-down(xxxs) {
+            //   width: 25px;
+            //   height: 25px;
+            //   border-radius: 100%;
+            // }
+          }
         }
-        border-radius: 120px;
-        background-color: #E3E3E3;
-        img{
-          width: 90px;
-          height: 90px;
+        span{
+          font-size: 20px;
+          font-weight: 400;
+          margin-top: 15px;
           @include media-breakpoint-down(sm) {
-            width: 38px;
-            height: 38px;
+            font-size: 13px;
           }
         }
       }
-      span{
-        font-size: 20px;
-        font-weight: 400;
-        margin-top: 15px;
-        @include media-breakpoint-down(sm) {
-          font-size: 13px;
-      
-    
-        }
-      }
-    }
-   }
-   .active {
+  }
+  .active {
     border: 2px solid #000;
   }
-   .active::after{
+  .active::after{
     content: "";
     border: 2px solid #fff;
     width: 115px;
     height: 115px;
-    @include media-breakpoint-down(sm) {
-      width: 44px;
-      height: 44px;
+    @include media-breakpoint-down(lg) {
+      width: 106px;
+      height: 106px;
+      border-radius: 100%;
+    }
+    @include media-breakpoint-down(md) {
+      width: 86px;
+      height: 86px;
+      border-radius: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 66px;
+      height: 66px;
+      border-radius: 100%;
+    }
+    @include media-breakpoint-down(xxs) {
+      width: 51px;
+      height: 51px;
+      border-radius: 100%;
     }
     // display: flex;
     border-radius: 61px;
@@ -609,41 +769,64 @@ body {
       
     // }
   }
+
   }
   .shades{
     display: flex;
     margin-top: 20px;
+    align-items: center;
     @include media-breakpoint-down(md) {
       display: block;
-
     }
     p{
       font-size: 35px;
       font-weight: 500;
       width: 200px;
- 
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        width: 150px;
+      }
+      @include media-breakpoint-down(xxs) {
+        font-size: 20px;
+      }
     }
     .colors{
-     display: flex;
-       gap: 20px;
-       @include media-breakpoint-down(md) {
-     display: grid;
-
-        grid-template-columns: auto auto;
-  
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      gap: 20px;
+      @include media-breakpoint-down(xl) {
+        display: grid;
+        // gap: 10px;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: auto auto auto;
       }
-       div{
+      @include media-breakpoint-down(lg) {
+        grid-template-columns: auto auto;
+      }
+      @include media-breakpoint-down(md) {
+        justify-content: start ;
+        // grid-template-columns: auto auto;
+      }
+      div{
         div{
           cursor: pointer;
           width: 200px;
           height: 80px;
+
+          @include media-breakpoint-down(xxl) {
+            width: 180px;
+            height: 69px;
+          }
           @include media-breakpoint-down(sm) {
             width: 163px;
             height: 69px;
-         
-             }
+          }
+          @include media-breakpoint-down(xxs) {
+            width: 130px;
+            height: 55px;
+          }
         }
-     
         span{
           font-size: 20px;
           font-weight: 400;
@@ -678,16 +861,18 @@ body {
      height: 76px;
      position: absolute;
       border-radius: 0;
+      @include media-breakpoint-down(xxl) {
+        width: 176px;
+        height: 65px;
+      }
       @include media-breakpoint-down(sm) {
-     
         width: 159px;
         height: 65px;
-         }
-     // @include media-breakpoint-down(sm) {
-     //   width: 23px;
-     //   height: 23px;
-       
-     // }
+      }
+      @include media-breakpoint-down(xxs) {
+        width: 126px;
+        height: 51px;
+      }
    }
   }
   #results{
@@ -781,6 +966,11 @@ body {
   @include media-breakpoint-down(xxs) {
     width: 51px;
     height: 51px;
+  }
+  @include media-breakpoint-down(xxxs) {
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
   }
 }
 
