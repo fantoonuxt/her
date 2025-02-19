@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const findYourShade = document.querySelector('.findYourShade');
   const survey = document.querySelector('#survey-container');
   let currentQuestion = 0;
-
+  let filterProduct = [];
   function showQuestion(index) {
     questions.forEach((question, i) => {
       question.style.display = i === index ? 'block' : 'none';
@@ -22,20 +22,55 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
+  function rgbToHex(rgb) {
+    const rgbArray = rgb.match(/\d+/g);
+    const r = parseInt(rgbArray[0]).toString(16).padStart(2, '0');
+    const g = parseInt(rgbArray[1]).toString(16).padStart(2, '0');
+    const b = parseInt(rgbArray[2]).toString(16).padStart(2, '0');
+    return `#${r}${g}${b}`.toUpperCase();
+  }
   function goToNextQuestion() {
     currentQuestion++;
     if (currentQuestion < questions.length) {
       showQuestion(currentQuestion);
-   
     }
     if(currentQuestion === 4){
       console.log(survey);
       findYourShade.style.display = 'none';
       survey.style.display = 'none';
     }
+    const activeNatural = document.querySelector('.allColors .active');
+    let activeNaturalObject = {type: activeNatural.getAttribute('name'), color: rgbToHex(activeNatural.style.backgroundColor)} 
+
+    const activeUndertone = document.querySelector('.app-card .active');
+    let activeUndertoneObject = {type: activeUndertone.getAttribute('name'), color: rgbToHex(activeUndertone.style.backgroundColor)} 
+
+    const activeMoreImg = document.querySelector('.eye-color .active img');
+    let activeMoreImgObject = {type: "Eye color", img: activeMoreImg.src} 
+    const activeMoreColor = document.querySelector('.hair-color .active img');
+    let activeMoreColorObject = {type: "Hair", img: activeMoreColor.src} 
+
+    const activeShade = document.querySelector('.shades .active');
+    let activeActiveShadeObject = {type: "Shade",  color: rgbToHex(activeShade.style.backgroundColor)} 
+
+    if(currentQuestion == 1)
+      filterProduct.push(activeNaturalObject);
+    else if(currentQuestion == 2)
+      filterProduct.push(activeUndertoneObject);
+    else if(currentQuestion == 3){
+      filterProduct.push(activeMoreImgObject);
+      filterProduct.push(activeMoreColorObject);
+    }
+    else if(currentQuestion == 4)
+      filterProduct.push(activeActiveShadeObject);
+    localStorage.setItem('filerProduct', JSON.stringify(filterProduct))
+    console.log(filterProduct);
+
   }
   function goToPreviousQuestion() {
+    filterProduct.pop();
+    localStorage.removeItem('filerProduct')
+    localStorage.setItem('filerProduct', JSON.stringify(filterProduct))
     currentQuestion--;
     if (currentQuestion >= 0) {
       showQuestion(currentQuestion);
